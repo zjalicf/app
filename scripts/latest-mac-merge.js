@@ -12,7 +12,7 @@ const client = new Octokit({
 });
 
 const OWNER = 'acreom';
-const REPO = 'releases';
+const REPO = 'app';
 const URL = `/repos/${OWNER}/${REPO}/releases`;
 const VERSION = pkg.version;
 const FILE_NAME = 'latest-mac.yml';

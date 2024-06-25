@@ -10,7 +10,7 @@
     {
       "provider": "github",
       "owner": "acreom",
-      "repo": "releases",
+      "repo": "app",
       "releaseType": "draft"
     }
   ],

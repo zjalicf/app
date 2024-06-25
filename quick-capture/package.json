@@ -1,0 +1,44 @@
+{
+    "name": "quick-capture",
+    "version": "1.20.0",
+    "private": true,
+    "engines": {
+        "node": ">=18.16"
+    },
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt generate"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.13.6",
+        "@tiptap/extension-document": "^2.0.3",
+        "@tiptap/extension-link": "^2.0.0-beta.205",
+        "@tiptap/extension-mention": "^2.0.3",
+        "@tiptap/extension-placeholder": "^2.0.0-beta.202",
+        "@tiptap/html": "^2.0.0-beta.199",
+        "@tiptap/pm": "^2.0.3",
+        "@tiptap/starter-kit": "^2.0.0-beta.202",
+        "@tiptap/suggestion": "^2.0.3",
+        "@tiptap/vue-2": "^2.0.0-beta.202",
+        "axios": "^1.4.0",
+        "chrono-node": "2.6.2",
+        "date-fns": "^2.30.0",
+        "date-fns-tz": "^2.0.0",
+        "linkify-string": "^4.1.1",
+        "lodash": "^4.17.21",
+        "lottie-web": "^5.12.2",
+        "nuxt": "^2.15.8",
+        "uuid": "^9.0.0",
+        "vue-class-component": "^7.2.6",
+        "vue-property-decorator": "^9.1.2"
+    },
+    "devDependencies": {
+        "@nuxt/types": "^2.15.8",
+        "@nuxt/typescript-build": "^2.1.0",
+        "@nuxtjs/style-resources": "^1.2.1",
+        "@types/lodash": "^4.14.195",
+        "@types/uuid": "^8.3.4",
+        "sass": "^1.56.1",
+        "sass-loader": "^10.1.1"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "scripts",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "module",
+    "engines": {
+        "node": ">=18.16"
+    },
+    "dependencies": {
+        "octokit": "^3.1.0"
+    },
+    "scripts": {
+        "merge": "node latest-mac-merge.js"
+    }
+}

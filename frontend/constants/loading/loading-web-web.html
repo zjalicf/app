@@ -1,0 +1,85 @@
+<style>
+    :root.light {
+        --app-bg-color: #EAECEF;
+        --tab-bg-color: #ffffff;
+        --tab-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+        --sekeleton-color: rgba(148, 157, 173, 0.16);
+        --bg-color: #ffffff;
+        --loading-color: #1e232d;
+    }
+
+    :root.dark {
+        --app-bg-color: #27313d;
+        --tab-bg-color: #1e232d;
+        --tab-box-shadow: none;
+        --sekeleton-color: rgba(217, 217, 217, 0.1);
+        --bg-color: #000000;
+        --loading-color: #ffffff;
+    }
+
+
+    body,
+    html,
+    #<%= globals.id %> {
+                         margin: 0;
+                         padding: 0;
+                         overflow: hidden;
+                         background: #27313d;
+                     }
+    #main-loader {
+        width: 100%;
+        height: 100vh;
+        background: #27313d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #main-loader svg {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    #loading-icon {
+        position: relative;
+    }
+
+    #loading-icon::after {
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 2px solid currentColor;
+        border-color: white white transparent;
+        animation: rotate 1.2s linear infinite;
+        border-radius: 50%;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<div id="main-loader">
+    <div id="loading-icon" style="width: 30px; height: 30px;"></div>
+</div>
+<script>
+  try {
+    let theme = 'DARK';
+    if (localStorage.getItem('theme')) {
+      theme = localStorage.getItem('theme');
+    }
+
+    const html = document.documentElement;
+    html.classList.add(theme.toLowerCase())
+  } catch(e) {
+    console.log(e)
+  }
+</script>

@@ -1,0 +1,53 @@
+<style>
+    body,
+    html,
+    #<%= globals.id %> {
+                         margin: 0;
+                         padding: 0;
+                         overflow: hidden;
+                         background: #27313d;
+                     }
+    #main-loader {
+        width: 100%;
+        height: 100vh;
+        background: #27313d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #main-loader svg {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    #loading-icon {
+        position: relative;
+    }
+
+    #loading-icon::after {
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 2px solid currentColor;
+        border-color: white white transparent;
+        animation: rotate 1.2s linear infinite;
+        border-radius: 50%;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<div id="main-loader">
+    <div id="loading-icon" style="width: 28px; height: 28px;"></div>
+</div>

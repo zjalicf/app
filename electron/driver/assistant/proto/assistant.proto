@@ -1,0 +1,29 @@
+syntax = 'proto3';
+
+package com.acreom.assistant;
+
+// The AcreomAssistant service definition.
+service AcreomAssistant {
+  // evaluate text using quickadd
+  rpc Quickadd (QuickaddRequest) returns (QuickaddReply) {}
+}
+
+// The request message containing the data for quickadd service.
+message QuickaddRequest {
+  bool pm_bias = 1;
+  bool fallback = 2;
+
+  string data = 3;
+  string ts = 4;
+  string date_format = 5;
+}
+
+// The response message containing the quickadd response.
+message QuickaddReply {
+  optional string text = 1;
+  optional string date = 3;
+  optional string start = 4;
+  optional string end = 5;
+  optional string rrule = 6;
+  optional string parsed_text = 7;
+}

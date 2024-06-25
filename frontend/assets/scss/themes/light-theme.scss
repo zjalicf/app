@@ -1,0 +1,1302 @@
+:root.theme-light {
+    /* APP */
+    --danger-color: #{$danger}; //update color -s
+    --orange-color: #{$orange};
+    --app-text-color: #{$blueGrey800};
+    --app-bg-color: #{#eaecef};
+    --app-auth-bg-color: #{$white};
+    --app-caret-color: var(--accent-color);
+    --app-selection-color: #{rgba(var(--accent-color-triplet), 0.5)};
+
+    --app-bg-icon-color: #{$blueGrey500};
+    --app-bg-icon-color__hover: #{$blueGrey800};
+    --app-bg-icon-bg-color__hover: #{$blueGrey300-13};
+    --app-bg-icon-color__disabled: #{$blueGrey200};
+
+    --app-homepage-layoyt-bg-color: #{$black};
+
+    /* APP MOBILE */
+    --app-mobile-bg-color: #{$blueGrey950};
+
+    /* TABS */
+    --tab-bg-color: #{$white};
+    --tab-header-bg-color: #{rgba($white, 0.63)};
+    --tab-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+
+    --tab-controls-icon-color: #{$blueGrey400};
+    --tab-controls-bg-color: #{$blueGrey100-32};
+    --tab-controls-icon-color__hover: #{$blueGrey800};
+    --tab-controls-bg-color__hover: #{$blueGrey300-13};
+
+    --tab-pill-text-color: #{$blueGrey400};
+    --tab-pill-bg-color: #{$blueGrey300-13};
+    --tab-pill-icon-color: #{$blueGrey400};
+
+    --tab-pill-text-color__hover: #{$blueGrey800};
+    --tab-pill-icon-color__hover: #{$blueGrey800};
+
+    --tab-pill-bg-color__active: #{$blueGrey300-13};
+    --tab-pill-bg-group-color__active: #{linear-gradient(to right top, rgba(var(--accent-color-triplet), 0.2), rgba(var(--accent-color-triplet), 0.1))};
+    --tab-pill-bg-group__active__hover: #{$blueGrey300-13};
+    --tab-pill-text-color__active: #{$blueGrey800};
+    --tab-pill-icon-color__active: #{$blueGrey800};
+
+    --tab-meta-text-color: #{$blueGrey300};
+
+    --tab-drag-highlight-bg-color: #{$blueGrey300-32};
+    --tab-drag-highlight-border-color: #{$blueGrey100};
+
+    --tab-pill-close-icon-color: #{$blueGrey300};
+    --tab-title-text-color: #{$blueGrey900};
+
+    --tab-divider-color: #{$blueGrey300-13};
+
+    --all-pages-header-controls-box-shadow-color: #{rgba(0, 0, 0, 0.05)};
+    --all-pages-header-controls-bg-color: #{$blueGrey600};
+    --all-pages-header-controls-bg-color__danger: #{$blueGrey100};
+    --all-pages-header-controls-text-color__danger: #{#e85e59};
+    --all-pages-header-controls-bg-color__hover: #{$blueGrey700};
+    --all-pages-header-controls-text-color: #{$white};
+    --all-pages-header-controls-delete-text-color__hover: #{$white};
+    --all-pages-header-controls-delete-bg-color__hover: #{rgba($danger, 0.8)};
+
+    --calendar-tab-options-new-bg-color: #{$blueGrey500};
+    --calendar-tab-options-new-text-color: #{$white};
+    --calendar-tab-options-new-bg-color__hover: #{$blueGrey700};
+    --calendar-header-controls-border-color__today: #{rgba(103, 117, 137, 0.16)};
+
+    --my-day-tab-title-color__past: #{$blueGrey600};
+
+    --new-tab-button-bg-color: #{$white};
+    --new-tab-button-text-color: #{$blueGrey800};
+    --new-tab-button-bg-color__hover: #{$blueGrey300-13};
+    --new-tab-button-text-color__hover: #{$blueGrey900};
+    --new-tab-title-color: #{$blueGrey800};
+    --new-tab-result-title-color: #{$blueGrey600};
+    --new-tab-result-date-color: #{$blueGrey500};
+    --new-tab-result-navigation-color: #{$blueGrey800};
+    --new-tab-result-title-color__hover: #{$blueGrey800};
+    --new-tab-result-bg-color__hover: #{$blueGrey300-13};
+
+    /* DOCUMENT TAB */
+    --tab-document-title-placeholder-color: #{$blueGrey200};
+
+    /* SCROLLBARS */
+    --scrollbar-light-bg-color: #{$blueGrey300-32};
+    --scrollbar-light-bg-color__hover: #{$blueGrey300-48};
+    --scrollbar-bg-color: #{$blueGrey300-32};
+    --scrollbar-bg-color__hover: #{$blueGrey300-48};
+
+    /* EDITOR */
+    --editor-text-color: #{$darkBlack};
+    --editor-mark-bg-color: #{rgba(var(--accent-color-triplet), 0.4)};
+    --editor-code-bg-color: #{$blueGrey300-13};
+    --editor-code-box-shadow: none;
+    --editor-code-placeholder-color: #{$blueGrey500};
+    --editor-blockquote-border-color: #{$blueGrey300};
+    --editor-hr-color: #{$blueGrey100};
+    --editor-table-border-color: #{$blueGrey100};
+    --editor-table-header-bg-color: #{$blueGrey300-13};
+    --editor-table-selection-color: #{rgba(var(--accent-color-triplet), 0.2)};
+    --editor-list-marker-color: #{$blueGrey400};
+    --editor-search-result-bg-color: #ffff00;
+    --editor-search-result-text-color: #{$blueGrey800};
+    --editor-search-result-bg-color__active: #e44ee4;
+    --editor-search-result-text-color__active: #{$white};
+    --editor-placeholder-color: #{$blueGrey200};
+
+    --editor-checkbox-color: #{$blueGrey500};
+
+    --editor-searchbar-bg-color: #{$white};
+    --editor-searchbar-button-text-color: #{$blueGrey400};
+    --editor-searchbar-button-text-color__hover: #{$blueGrey500};
+    --editor-searchbar-text-color: #{$blueGrey800};
+
+    /* TOOLTIPS */
+    --tooltip-text-color: #{$blueGrey200};
+    --tooltip-bg-color: #111214;
+    --tooltip-minicalendar-bg-color: #{$blueGrey800};
+    --tooltip-button-text-color: #{$blueGrey100};
+    --tooltip-button-bg-color: #{$blueGrey800};
+
+    /* TOOLTIP KEYS */
+    --tooltip-keys-text-color: #{$blueGrey500};
+    --tooltip-keys-bg-color: #{$blueGrey300-32};
+
+    /* SIDEBAR */
+    --sidebar-text-color: #{$blueGrey900};
+    --sidebar-icon-color: #{$blueGrey500};
+    --sidebar-chevron-color: #{$blueGrey200};
+
+    --sidebar-menu-icon-color: #{$white};
+    --sidebar-menu-brightness: #{120%};
+    --sidebar-menu-small-icon-color: #{$blueGrey600};
+    --sidebar-menu-small-icon-bg-color: #{rgba(241,241,241, 0.6)};
+
+    --sidebar-text-color__active: #{$blueGrey950};
+    --sidebar-icon-color__active: #{$blueGrey800};
+    --sidebar-bg-color: #{$blueGrey50};
+    --sidebar-bg-color__active: #{$blueGrey300-13};
+    --sidebar-bg-color__mobile: #{$blueGrey900};
+
+    --sidebar-text-color__hover: #{$blueGrey950};
+    --sidebar-icon-color__hover: #{$blueGrey950};
+    --sidebar-bg-color__hover: #{$blueGrey300-13};
+
+    --sidebar-bg-color__active__hover: #{$blueGrey300-13};
+
+    --sidebar-footer-border-color: #{rgba(103, 116, 137, 0.14)};
+    --sidebar-footer-text-color: #{$blueGrey700};
+    --sidebar-footer-icon-color: #{$blueGrey500};
+
+    --sidebar-footer-text-color__hover: #{$blueGrey950};
+    --sidebar-footer-icon-color__hover: #{$blueGrey800};
+    --sidebar-footer-bg-color__hover: #{$blueGrey300-13};
+
+    --sidebar-app-placeholder-dismiss-color: #{$blueGrey400};
+    --sidebar-app-placeholder-dismiss-color__hover: #{$blueGrey700};
+
+    --sidebar-new-entity-dropdown-text-color: #{$blueGrey500};
+    --app-navigation-integration-default-color: #{$blueGrey950};
+
+    // web only triple dots
+    --sidebar-more-options-color: #{$blueGrey500};
+    --sidebar-more-options-color__hover: #{$blueGrey700};
+    --sidebar-more-options-color__active: #{$blueGrey500};
+    --sidebar-more-options-color__active__hover: #{$blueGrey700};
+
+    --sidebar-group-button-text-color: #{$blueGrey500};
+    --sidebar-group-button-text-color__hover: #{$darkBlack};
+    --sidebar-group-button-bg-color__hover: #{$blueGrey300-13};
+
+    --sidebar-onboarding-bg-color: #{$blueGrey50};
+    --sidebar-onboarding-title-text-color: #{$blueGrey700};
+    --sidebar-onboarding-title-color__hover: #{$blueGrey950};
+    --sidebar-onboarding-progress-bg-color: #{$blueGrey100};
+    --sidebar-onboarding-progress-bg-color__complete: #{$blueGrey950};
+    --sidebar-onboarding-icon-todo-color: #{$blueGrey400};
+    --sidebar-onboarding-text-color: #{$blueGrey800};
+    --sidebar-onboarding-footer-text-color: #{$blueGrey700};
+    --sidebar-onboarding-footer-text-color__hover: #{$blueGrey950};
+    --sidebar-action-icon-color: #{$blueGrey400};
+    --sidebar-action-icon-color__hover: #{$blueGrey900};
+
+    --dragging-info-text-color: #{$blueGrey800};
+    --dragging-info-bg-color: #{$blueGrey300-32};
+    --dragging-info-icon-color: #{$blueGrey800};
+
+    /* HEADER */
+    --workspace-selector-icon-color: #{$white};
+    --workspace-selector-dropdown-text-color: #{$blueGrey700};
+    --workspace-selector-dropdown-divider-color: #{var(--tab-divider-color)};
+    --workspace-selector-dropdown-subtext-color: #{$blueGrey500};
+    --workspace-selector-dropdown-text-color__hover: #{$blueGrey800};
+    --workspace-selector-icon-new-color: #{$blueGrey500};
+
+    --sync-status-icon-color: #{$blueGrey400};
+
+    --windows-controls-color: #{$blueGrey400};
+    --windows-controls-color__hover: #{$blueGrey500};
+
+    --navigation-info-color: #{$blueGrey400};
+    --navigation-info-bg-color: #{#f7f7f8};
+    --navigation-info-border-color: #{#f7f7f8};
+    --navigation-info-box-shadow: 0px 0.4px 0px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(0, 0, 0, 0.07);
+    --navigation-info-filter: none;
+    --navigation-info-bg-color__hover: #{#f7f7f8};
+    --navigation-info-border-color__hover: #{#f7f7f8};
+
+    /* NAVIGATION */
+    --navigation-bg-color: #{#f7f7f8};
+    --navigation-border-color: #{#f7f7f8};
+    --navigation-box-shadow: 0px 0.5px 2px 0px rgba(0, 0, 0, 0.06), 0px 1.2px 5px 0px rgba(0, 0, 0, 0.06), 0px 4px 17px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.06);
+    --navigation-title-text-color: #{$blueGrey950};
+    --navigation-title-placeholder-color: #{$blueGrey400};
+    --navigation-tip-text-color: #{$blueGrey600};
+    --navigation-keys-text-color: #{$blueGrey300};
+
+    /* SEARCH RESULT */
+    --search-result-content-highlight-bg-color: #{rgba(var(--accent-color-triplet), 0.2)};
+    --search-result-content-text-color: #{$blueGrey600};
+    --search-result-content-icon-color: #{$blueGrey600};
+    --search-result-content-icon-color__active: #{$blueGrey800};
+    --search-result-content-vault-text-color: #{$blueGrey600};
+    --search-result-highlight-text-color: #{$blueGrey950};
+    --search-result-highlight-bg-color__active: #{rgba(var(--accent-color-triplet), 0.2)};
+    --search-result-highlight-bg-color__hover: #{$blueGrey300-13};
+    --search-result-text-color: #{$blueGrey950};
+    --search-result-content-vault-breadcrumbs-color: #{$blueGrey500};
+
+    /* DAILY AGENDA */
+    --agenda-title-color: #{$blueGrey800};
+
+    /* TASK REVIEW */
+    --task-review-bg-color: #f7f7f8; /* update bluegray 50 for this? -s */
+    --task-review-box-shadow: #{var(--task-adder-box-shadow)};
+    --task-review-border: none;
+    --task-review-title-text-color: #{$blueGrey800};
+    --task-review-title-icon-color: #{$blueGrey300};
+    --task-review-title-controls-icon-color: #{$blueGrey200};
+    --task-review-title-controls-icon-color__hover: #{$blueGrey300};
+    --task-review-title-count-text-color: #{$white};
+    --task-review-title-count-bg-color: #{$blueGrey600};
+    --task-review-list-group-header-text-color: #{$blueGrey800};
+    --task-review-list-group-header-icon-color: #{$blueGrey400};
+    --task-review-list-group-bg__hover: #{$blueGrey500-14};
+    --task-review-list-group-header-icon-color__hover: #{$white};
+
+    --task-review-page-divider-color: #{$blueGrey300-32};
+    --task-review-page-bg-color__hover: #{$blueGrey300-13};
+    --task-review-page-text-color__hover: #{$blueGrey800};
+    --task-review-page-icon-color__hover: #{$blueGrey500};
+    --task-review-page-title-text-color: #{$blueGrey800};
+    --task-review-page-title-icon-color: #{$blueGrey400};
+    --task-review-page-redirect-icon-color: #{$blueGrey500};
+
+    --task-review-empty-icon-color: #{$blueGrey100};
+    --task-review-empty-text-color: #{$blueGrey400};
+
+    --task-review-notification-bg-color: #{$black};
+    --task-review-notification-color: #{$white};
+
+    /* TASK TAB */
+    --task-tab-collapse-button-color: #{$blueGrey300-32};
+    --task-tab-collapse-text-color: #{$blueGrey800};
+    --task-tab-collapse-icon-color: #{$blueGrey800};
+    --task-tab-collapse-text-color__mobile: #{$white};
+    --task-tab-collapse-text-color__hover: #{$blueGrey800};
+    --task-tab-collapse-bg-color__hover: #{$blueGrey300-13};
+    --task-tab-collapse-text-color__hover__mobile: #{$blueGrey400};
+    --task-tab-divider-color: #{$blueGrey300-32};
+    --task-tab-count-bg-color: #{$blueGrey300-13};
+    --task-tab-count-text-left-color: #{$blueGrey500};
+    --task-tab-count-text-right-color: #{$blueGrey200};
+    --task-tab-pin-icon-color: #{$blueGrey500};
+    --task-tab-redirect-icon-color: #{$blueGrey500};
+    --task-tab-open-doc-icon-color: #{$blueGrey500};
+    --task-tab-open-doc-bg-color__hover: #{$blueGrey300-13};
+    --task-tab-open-doc-icon-color__hover: #{$blueGrey600};
+
+    /* CONTEXT MENU */
+    --context-menu-divider-color: #{$blueGrey300-32};
+    --context-menu-button-text-color: #{$blueGrey950};
+    --context-menu-button-text-color__hover: #{$blueGrey950};
+    --context-menu-button-icon-color: #{$blueGrey300};
+    --context-menu-button-icon-color__hover: #{$blueGrey800};
+    --context-menu-button-icon-color__path: #{$white};
+    --context-menu-button-danger-text-color__hover: #{$white};
+    --context-menu-button-danger-bg-color__hover: #{rgba($danger, 1)};
+    --context-menu-section-title: #{$blueGrey400};
+    --context-menu-tooltip-keys-color: #{$blueGrey400};
+
+    /* FROSTED GLASS */
+    --frosted-glass-box-shadow: 0px 0.5px 1.85px 0px rgba(0, 0, 0, 0.06), 0px 1.2px 5px 0px rgba(0, 0, 0, 0.06), 0px 4px 17px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.06);
+    --frosted-glass-button-box-shadow: none;
+    --frosted-glass-border-color: rgba(0, 0, 0, 0.02);
+    --frosted-glass-bg-color: #{rgba(244, 244, 244, 0.82)};
+    --frosted-glass-suggestion-bg-color: #{$blueGrey300-13};
+
+    /* PRO BADGE */
+    --pro-badge-bg-color: #{$blueGrey800};
+    --pro-badge-color: #{$white};
+
+    /* MODALS */
+    --modal-bg-color: #{$white};
+    --modal-box-shadow: 0px 3px 5px 0px rgb(46 54 67 / 4%), 0px 6px 12px 0px rgb(46 54 67 / 6%);
+    --modal-title-text-color: #{$blueGrey800};
+    --modal-body-text-color: #{$blueGrey500};
+
+    --search-modal-bg-color: #{$white};
+
+    --event-modal-calendar-picker-button-text-color__hover: #{$white};
+    --event-modal-calendar-picker-button-bg-color__hover: #{$blueGrey300-13};
+    --event-modal-calendar-picker-button-box-shadow-color__hover: #{rgba(0, 0, 0, 0.05)};
+    --event-modal-calendar-picker-dropdown-integration-title-color: #{$blueGrey600};
+    --event-modal-calendar-picker-dropdown-integration-text-color: #{$blueGrey800};
+    --event-modal-calendar-picker-dropdown-integration-icon-color: #{$blueGrey800};
+    --event-modal-calendar-picker-dropdown-integration-text-color__hover: #{$blueGrey950};
+    --event-modal-calendar-picker-dropdown-integration-bg-color__hover: #{rgba(var(--accent-color-triplet), 0.2)};
+
+    --event-modal-document-dropdown-text-color: #{$blueGrey800};
+    --event-modal-document-dropdown-button-text-color: #{$blueGrey400};
+    --event-modal-document-dropdown-option-bg-color: none;
+    --event-modal-document-dropdown-option-text-color: #{$blueGrey950};
+    --event-modal-document-dropdown-option-icon-color: #{$blueGrey300};
+    --event-modal-document-dropdown-option-bg-color__hover: #{$blueGrey800};
+    --event-modal-document-dropdown-option-text-color__hover: #{$blueGrey950};
+    --event-modal-document-dropdown-option-icon-color__hover: #{$blueGrey800};
+
+    --event-modal-option-text-color: #{$blueGrey950};
+    --event-modal-option-icon-color: #{$blueGrey300};
+    --event-modal-option-text-color__hover: #{$blueGrey950};
+    --event-modal-option-icon-color__hover: #{$blueGrey800};
+
+    --event-modal-attendees-summary-text-color: #{$blueGrey800};
+
+    --event-modal-attendees-row-bg-color: none;
+    --event-modal-attendees-row-avatar-color: #{$blueGrey600};
+    --event-modal-attendees-row-avatar-background: #{$blueGrey100};
+    --event-modal-attendees-row-email-color: #{$blueGrey950};
+    --event-modal-attendees-row-email-color__highlight: #{$blueGrey400};
+    --event-modal-attendees-row-status-color__accept: #{#2c9552};
+    --event-modal-attendees-row-status-color__unknown: #{$blueGrey300};
+    --event-modal-attendees-row-status-color__tenative: #{#cb8842};
+    --event-modal-attendees-row-status-color__declined: #{#e85e59};
+    --event-modal-attendees-row-button-text-color: #{$blueGrey300};
+    --event-modal-attendees-row-button-text-color__hover: #{$blueGrey800};
+    --event-modal-attendees-row-input-text-color: #{$blueGrey800};
+    --event-modal-attendees-row-input-bg-color: #{$blueGrey300-13};
+    --event-modal-attendees-row-input-placeholder-color: #{$blueGrey300};
+
+    --event-modal-attendees-search-divider-color: #{$blueGrey300};
+    --event-modal-attendees-search-divider-color__active: #{$blueGrey300};
+    --event-modal-attendees-search-email-color: #{$blueGrey950};
+    --event-modal-attendees-search-email-color__hover: #{$blueGrey950};
+    --event-modal-attendees-search-name-color: #{$blueGrey400};
+    --event-modal-attendees-search-name-color__hover: #{$blueGrey600};
+    --event-modal-attendees-search-button-bg-color__active: #{rgba(var(--accent-color-triplet), 0.2)};
+
+    --event-modal-conferencing-selector-input-text-color: #{$blueGrey950};
+    --event-modal-conferencing-selector-input-placeholder-color: #{$blueGrey300};
+    --event-modal-conferencing-selector-button-text-color: #{$blueGrey400};
+    --event-modal-conferencing-selector-button-text-color__hover: #{$blueGrey700};
+    --event-modal-conferencing-selector-button-bg-color__hover: #{$blueGrey300-13};
+    --event-modal-conferencing-selector-join-bg-color: #{$blueGrey500};
+    --event-modal-conferencing-selector-join-text-color: #{$white};
+    --event-modal-conferencing-selector-join-bg-color__hover: #{$blueGrey700};
+    --event-modal-conferencing-selector-join-text-color__hover: #{$white};
+
+    --local-conflicts-button-color: #{var(--context-menu-button-text-color)};
+    --local-conflicts-icon-color: #{var(--context-menu-button-icon-color)};
+    --local-conflicts-button-color__hover: #{var(--context-menu-button-text-color__hover)};
+
+    --trial-started-modal-badge-bg-color: #{$black};
+
+    --new-vault-image-text-color: #{$white};
+    --new-vault-input-bg-color: #{$blueGrey300-13};
+
+    --share-modal-label-text-color__enabled: #{$blueGrey950};
+    --share-modal-label-bg-color__hover: #{$blueGrey300-13};
+    --share-modal-icon-bg-color: #{#d9a9ff};
+    --share-modal-icon-text-color: #{$white};
+    --share-modal-access-bg-color: #{$blueGrey300-13};
+    --share-modal-access-bg-color__hover: #{$blueGrey700};
+    --share-modal-access-text-color: #{$blueGrey950};
+
+    --mermaid-modal-link-color: #{$blueGrey300};
+    --mermaid-error-bg-color: #{$blueGrey300-13};
+    --mermaid-toggle-icon-color: #{$blueGrey300};
+    --mermaid-toggle-icon-color__hover: #{$blueGrey500};
+    --mermaid-toggle-bg-color: #{rgba(148, 157, 173, 0.1)};
+    --mermaid-toggle-bg-color__hover: #{rgba(148, 157, 173, 0.2)};
+
+    --search-modal-close-bg-color: #{$blueGrey300-13};
+    --search-modal-close-text-color: #{$blueGrey300};
+    --search-modal-close-bg-color__hover: #{$blueGrey300-32};
+    --search-modal-close-text-color__hover: #{$blueGrey500};
+    --search-modal-input-bg-color: #{$blueGrey300-13};
+    --search-modal-input-border-color: #{rgba(241, 241, 241, 0.07)};
+    --search-modal-input-icon-color: #{$blueGrey600};
+    --search-modal-input-text-color: #{$blueGrey950};
+    --search-modal-input-placeholder-color: #{$blueGrey400};
+    --search-modal-no-results-text-color: #{$blueGrey500};
+    --search-modal-type-bg-color__hover: #{$blueGrey300-32};
+    --search-modal-type-bg-color__active: #{$blueGrey300-13};
+    --search-modal-subtitle-color: #{$blueGrey400};
+    --search-modal-assistant-result-color: #{black};
+    --search-modal-assistant-exception-background: #{rgba($danger, 0.4)};
+    --search-modal-assistant-exception-border-color: #{rgba($danger, 0.2)};
+
+    --upgrade-modal-fine-print-text-color: #{$blueGrey400};
+    --upgrade-modal-icon-color: #{$blueGrey800};
+
+    --settings-modal-title-color: #{$blueGrey800};
+
+    --settings-modal-option-title-color: #{$blueGrey800};
+    --settings-modal-option-description-color: #{$blueGrey500};
+
+    --settings-modal-button-primary-text-color: #{$blueGrey950};
+    --settings-modal-button-danger-text-color: #{#e85e59};
+    --settings-modal-button-primary-bg-color: #{$blueGrey300-13};
+    --settings-modal-button-primary-text-color__hover: #{$blueGrey950};
+    --settings-modal-button-danger-text-color__hover: #{$white};
+    --settings-modal-button-primary-bg-color__hover: #{linear-gradient(0deg, rgba(103, 116, 137, 0.07) 0%, rgba(103, 116, 137, 0.07) 100%), #eef2f7};
+    --settings-modal-button-danger-bg-color__hover: #{#e85e59};
+
+    --settings-modal-bg-color: #{$white};
+    --settings-modal-sidebar-title-color: #{$blueGrey400};
+    --settings-modal-sidebar-item-text-color: #{$blueGrey950};
+    --settings-modal-sidebar-item-text-color__hover: #{$blueGrey950};
+    --settings-modal-sidebar-item-bg-color__hover: #{$blueGrey300-13};
+
+    --settings-modal-my-account-version-color: #{$blueGrey300};
+    --settings-modal-my-account-letter-bg-color: #{$blueGrey500};
+    --settings-modal-my-account-message-bg-color: #{$blueGrey300-13};
+
+    --settings-modal-keybinds-button-text-color__disabled: #{$blueGrey300};
+    --settings-modal-keybinds-button-bg-color__disabled: #{$blueGrey300-13};
+    --settings-modal-keybinds-text-color: #{$blueGrey500};
+    --settings-modal-keybinds-bg-color__hover: #{$blueGrey300-13};
+    --settings-modal-keybinds-text-color__hover: #{$blueGrey700};
+    --settings-modal-keybinds-recording-text-color: #{$blueGrey700};
+    --settings-modal-keybinds-missing-text-color: #{$blueGrey900};
+
+    --settings-modal-notifications-external-link-color: #{$blueGrey600};
+    --settings-modal-notifications-external-link-color__hover: #{$blueGrey950};
+    --settings-modal-notifications-bg-color: #{$blueGrey300-13};
+    --settings-modal-notifications-dropdown-span-color: #{$blueGrey300};
+    --settings-modal-notifications-dropdown-bg-color__hover: #{rgba(var(--accent-color-triplet), 0.2)};
+    --settings-modal-notifications-dropdown-span-color__hover: #{$blueGrey500};
+
+    --settings-modal-preferences-button-bg-color: #{$blueGrey300-13};
+    --settings-modal-preferences-button-bg-color__active: #{rgba(var(--accent-color-triplet), 0.2)};
+    --settings-modal-preferences-button-icon-color: #{$blueGrey400};
+    --settings-modal-preferences-button-icon-color__hover: #{$blueGrey500};
+    --settings-modal-preferences-button-icon-color__active: #{$blueGrey500};
+    --settings-modal-preferences-button-text: #{$blueGrey500};
+    --settings-modal-preferences-button-text__active: #{$blueGrey950};
+
+    --settings-modal-calendar-picker-bg-color: #{$blueGrey300-13};
+    --settings-modal-calendar-picker-text-color: #{$blueGrey800};
+    --settings-modal-calendar-picker-icon-color: #{$blueGrey600};
+    --settings-modal-calendar-picker-icon-color__hover: #{$blueGrey500};
+    --settings-modal-calendar-picker-bg-color__hover: #{$blueGrey300-32};
+    --settings-modal-calendar-remove-button-color: #{$blueGrey300};
+    --settings-modal-calendar-remove-button-color__hover: #{$blueGrey500};
+
+    --settings-modal-jira-sortable-bg-color: #{$blueGrey300-13};
+    --settings-modal-jira-sortable-bg-color__hover: #{$blueGrey300-32};
+    --settings-modal-jira-sortable-icon-color: #{$blueGrey400};
+    --settings-modal-jira-sortable-text-color__hover: #{$blueGrey900};
+
+    --settings-modal-labels-empty-text-color: #{$blueGrey300};
+    --settings-modal-labels-editor-text-color: #{$blueGrey800};
+    --settings-modal-labels-editor-background: #{$blueGrey300-13};
+    --settings-modal-labels-editor-background__hover: #{$blueGrey300-32};
+    --settings-modal-labels-editor-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    --settings-modal-labels-editor-controls-color-active: #{$blueGrey700};
+    --settings-modal-labels-editor-controls-color-inactive: #{$blueGrey400};
+
+    --vault-change-modal-link-color: #{var(--accent-color)};
+    --vault-change-option-bg-color: #{$blueGrey300-13};
+    --vault-change-option-icon-color: #{$blueGrey400};
+    --vault-change-option-text-color: #{$blueGrey500};
+    --vault-change-option-text-title-color: #{$blueGrey950};
+    --vault-change-option-text-title-span-color: #{$blueGrey950};
+    --vault-change-option-bg-color__hover: #{$blueGrey300-32};
+    --vault-change-option-text-color__active: #{$blueGrey500};
+    --vault-change-option-bg-color__active: #{rgba(var(--accent-color-triplet), 0.2)};
+
+    /* COMPONENTS/AUTH */
+    --email-login-buttons-text-color: #{var(--c-button-primary-text-color)};
+    --email-login-buttons-bg-color: #{var(--c-button-primary-bg-color)};
+    --email-login-buttons-bg-color__hover: #{var(--c-button-primary-bg-color__hover)};
+    --email-login-sub-text-color: #{$blueGrey950};
+    --email-login-sub-text-color__hover: #{var(--modal-title-text-color)};
+    --email-login-heading-text-color: #{var(--modal-title-text-color)};
+    --email-login-subheading-text-color: #{$blueGrey400};
+    --email-login-subheading-action-text-color: #{$blueGrey950};
+    --email-login-label-text-color: #{$blueGrey400};
+    --email-login-input-bg-color: #{$blueGrey300-13};
+    --email-login-input-placeholder-color: #{$blueGrey300};
+
+    /* COMPONENTS/BANNERS */
+    --banner-bg-color: #{$blueGrey300-13};
+    --banner-box-shadow: none;
+    --banner-text-color: #{$blueGrey700};
+    --banner-task-notification-text-color: #{$blueGrey800};
+    --banner-task-notification-bg-color: #{$blueGrey300-13};
+    --banner-task-notification-button-text-color: #{$blueGrey800};
+    --banner-task-notification-button-text-color__hover: #{$blueGrey700};
+    --banner-task-notification-button-bg-color: #{$blueGrey300-13};
+    --banner-task-notification-button-bg-box-shadow: #{rgba(0, 0, 0, 0)};
+    --banner-task-notification-button-bg-color__hover: #{$blueGrey300-32};
+    --banner-task-filter-bg-color: #{$blueGrey300-13};
+    --banner-task-filter-text-color: #{$blueGrey950};
+    --banner-task-filter-button-color: #{$blueGrey700};
+    --banner-task-filter-button-color__hover: #{$blueGrey950};
+    --banner-definition-filter-bg-color: #{$blueGrey300-13};
+    --banner-definition-filter-text-color: #{$blueGrey950};
+    --banner-definition-filter-text-color__hover: #{$blueGrey950};
+    --banner-definition-filter-button-color: #{$blueGrey700};
+    --banner-definition-filter-button-color__hover: #{$blueGrey950};
+
+    /* CALENDAR */
+    --calendar-border-color: #{$blueGrey300-32};
+    --calendar-more-button-text-color: #{$blueGrey300};
+    --calendar-expand-button-text-color: #{var(--tab-controls-icon-color)};
+    --calendar-expand-button-text-color__hover: #{var(--tab-controls-icon-color__hover)};
+    --calendar-expand-button-bg-color__hover: #{var(--tab-controls-bg-color__hover)};
+    --calendar-event-drag-handle-color: #{$blueGrey400};
+    --calendar-tooltip-text-color: #{$blueGrey950};
+    --calendar-tooltip-bg-color: #{$blueGrey300-13};
+    --calendar-tooltip-box-shadow: 0px 0.5px 1.85px 0px rgba(0, 0, 0, 0.06), 0px 1.2px 5px 0px rgba(0, 0, 0, 0.06), 0px 4px 17px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.06);
+    --calendar-day-label-text-color: #{$blueGrey800};
+    --calendar-day-label-text-color__hover: #{$blueGrey950};
+    --calendar-day-label-text-color-today: #{$blueGrey950};
+    --calendar-day-label-text-color-future: #{$blueGrey500};
+    --calendar-day-label-text-color-past: #{$blueGrey300};
+    --calendar-day-label-text-color-outside: #{$blueGrey100};
+
+    --calendar-picker-bg-color: #{$blueGrey300-13};
+    --calendar-picker-bg-color__hover: #{$blueGrey300-32};
+    --calendar-picker-icon-color: #{$blueGrey400};
+    --calendar-picker-text-color: #{$blueGrey950};
+    --calendar-picker-sub-text-color: #{$blueGrey600};
+
+    --calendar-visibility-text-color: #{var(--context-menu-section-title)};
+    --calendar-visibility-title-text-color: #{$blueGrey950};
+    --calendar-visibility-title-text-color__hover: #{$blueGrey950};
+
+    --calendar-visibility-dropdown-button-color: #{var(--context-menu-button-text-color)};
+    --calendar-visibility-dropdown-button-icon-color: #{var(--context-menu-button-icon-color)};
+    --calendar-visibility-dropdown-button-color__hover: #{var(--context-menu-button-text-color__hover)};
+    --calendar-visibility-dropdown-button-icon-color__hover: #{var(--context-menu-button-icon-color__hover)};
+
+    --calendar-event-need-action-bg-color: #{$white};
+    --calendar-event-declined-bg-color: #{$white};
+
+    --vfc-calendar-buttons-icon-color: #{$blueGrey400};
+    --vfc-calendar-buttons-icon-color__hover: #{$blueGrey800};
+    --vfc-calendar-day-name-color: #{$blueGrey300};
+    --vfc-calendar-date-text-color: #{$blueGrey800};
+    --vfc-calendar-date-text-color__active: #{$blueGrey950};
+    --vfc-calendar-date-text-color__hover: #{$blueGrey950};
+    --vfc-calendar-date-text-color__outside: #{$blueGrey300};
+    --vfc-calendar-date-text-color__outside__today: #{$blueGrey950};
+    --vfc-calendar-date-text-color__today: #{$blueGrey950};
+    --vfc-calendar-date-bg-color__today: #{$blueGrey300-13};
+    --vfc-calendar-highlight-bg-color: #{rgba(var(--accent-color-triplet), 0.2)};
+    --vfc-calendar-top-date-text-color: #{$blueGrey950};
+
+    --calendar-picker-selected-background: #{$blueGrey900};
+    --calendar-picker-selected-background__hover: #{$black};
+    --calendar-picker-selected-color: #{$white};
+    --calendar-picker-past-day-color: #{$blueGrey400};
+    --calendar-picker-header-color: #{$blueGrey700};
+
+    --calendar-popup-hr-color: #{$blueGrey500-16};
+    --calendar-popup-title-color: #{$black};
+    --calendar-popup-link-color: #{$blueGrey500};
+    --calendar-popup-link-color__hover: #{$blueGrey400};
+    --calendar-popup-button-background: #{$blueGrey500-16};
+    --calendar-popup-button-color: #{$blueGrey800};
+    --calendar-popup-button-background__hover: #{$blueGrey500-32};
+    --calendar-popup-button-color__hover: #{$blueGrey950};
+
+    --calendar-popup-expand-button-color: #{$blueGrey500};
+
+    /* CARD */
+    --document-card-border-color: #{$blueGrey300-32};
+    --document-card-bg-color: #{$white};
+    --document-card-bg-color_hover: #{$blueGrey300-13};
+    --document-card-box-shadow__hover: none;
+    --document-card-title-text-color__hover: #{$blueGrey800};
+    --document-card-title-text-color: #{$blueGrey800};
+    --document-card-title-text-color__archived__hover: #{$blueGrey800};
+    --document-card-title-text-color__archived: #{$blueGrey600};
+    --document-card-title-icon-color: #{$blueGrey500};
+    --document-card-untitled-text-color: #{$blueGrey700};
+    --document-card-meta-text-color: #{$blueGrey500};
+
+    --folder-card-title-color: #{$blueGrey800};
+    --folder-card-title-color__hover: #{$blueGrey800};
+
+    /* ROW */
+    --document-row-title-text-color: #{$blueGrey950};
+    --document-row-tasks-count-text-color: #{$blueGrey700};
+    --document-row-tasks-count-background-color: #{rgba(0, 0, 0, 0)};
+    --document-row-tasks-count-background-color__hover: #{$blueGrey500-16};
+    --document-row-tasks-count-fill-color: #{$black};
+    --document-row-tasks-count-shadow-color: #{#8a8a8a};
+    --document-row-tasks-count-border-color: #{$blueGrey500-16};
+    --document-row-tasks-dropdown-title-color: #{$blueGrey400};
+    --document-row-breadcrumbs-color: #{$blueGrey500};
+
+    /* CHEATSHEET */
+    --cheat-sheet-backdrop-color: #{$black};
+    --cheat-sheet-text-color: #{$blueGrey800};
+    --cheat-sheet-button-color: #{$blueGrey500};
+    --cheat-sheet-button-color__hover: #{$blueGrey800};
+    --cheat-sheet-footer-bg-color: #{rgba($white, 0.83)};
+    --cheat-sheet-content-table-color: #{$white};
+    --cheat-sheet-list-item-color: #{$blueGrey100};
+
+    /* DATE PICKER */
+    --date-picker-dropdown-button-text-color: #{$blueGrey950};
+    --date-picker-dropdown-button-text-color__hover: #{$blueGrey950};
+    --date-picker-dropdown-button-icon-color: #{$blueGrey300};
+    --date-picker-dropdown-button-value-color: #{$blueGrey800};
+
+    /* DOCUMENT LINK/EVENT */
+    --document-link-text-color: #{$blueGrey600};
+    --document-link-text-color_hover: #{$blueGrey800};
+    --document-link-bg-color_hover: #{$blueGrey300-13};
+    --document-link-icon-color: #{$blueGrey500};
+    --document-link-preview-bg-color: #{$white};
+    --document-link-preview-box-shadow: 0px 1px 6px rgb(0 0 0 / 36%), 0px 4px 22px rgb(0 0 0 / 16%), inset 0px 0px 0px 1px #303948;
+    --document-link-preview-title-color: #{$blueGrey800};
+    --document-link-breadcrumbs-color: #{$blueGrey400};
+
+    /* DROPDOWN */
+    --dropdown-controls-text-color: #{$blueGrey600};
+
+    --dropdown-controls-display-as-switch-bg-color: #{$blueGrey300-13};
+    --dropdown-controls-display-as-switch-bg-color__hover: #{$white};
+    --dropdown-controls-display-as-switch-box-shadow__hover: #{0px 0px 0.5px rgba(0, 0, 0, 0.2), 0px 6px 12px rgba(0, 0, 0, 0.1), 0px 0.5px 4px rgba(0, 0, 0, 0.1)};
+    --dropdown-controls-display-as-switch-color: #{$blueGrey600};
+    --dropdown-controls-display-as-switch-color__hover: #{$blueGrey700};
+
+    --dropdown-controls-display-properties-text-color: #{$blueGrey600};
+    --dropdown-controls-display-properties-bg-color: #{$blueGrey300-13};
+    --dropdown-controls-display-properties-text-color__selected: #{$blueGrey950};
+    --dropdown-controls-display-properties-bg-color__selected: #{$blueGrey300-32};
+    --dropdown-controls-display-properties-bg-color__selected__hover: #{$blueGrey300-48};
+
+    --dropdown-controls-select-text-color: #{$blueGrey950};
+    --dropdown-controls-select-bg-color: #{$blueGrey300-13};
+    --dropdown-controls-select-text-color__hover: #{$blueGrey950};
+    --dropdown-controls-select-bg-color__hover: #{$blueGrey300-32};
+    --dropdown-controls-select-text-color__active: #{$blueGrey950};
+
+    --dropdown-button-text-color: #{$blueGrey400};
+
+    --dropdown-context-labels-text-color: #{$blueGrey950};
+    --dropdown-context-labels-subtext-color: #{$blueGrey400};
+    --dropdown-context-labels-icon-color: #{$blueGrey400};
+    --dropdown-context-labels-button-color: #{$blueGrey950};
+    --dropdown-context-labels-button-color__hover: #{$blueGrey950};
+
+    --dropdown-emoji-title-color: #{$blueGrey400};
+    --dropdown-emoji-clear-color_hover: #{$blueGrey800};
+
+    /* EDITOR */
+    --bubble-menu-divider: #{$blueGrey300-32};
+    --bubble-menu-color-picker-button-color: #{$blueGrey500};
+
+    --bubble-menu-button-color: #{$blueGrey500};
+    --bubble-menu-button-color__disabled: #{$blueGrey300};
+
+    /* EDITOR EXTENSIONS */
+    --editor-extension-highlight-bg-color: #{rgba(var(--accent-color-triplet), 0.35)};
+    --editor-extension-selected-bg-color: #{$blueGrey300-13};
+    --editor-extension-selected-box-shadow-color: #{rgba(var(--accent-color-triplet), 0.4)};
+    --editor-extension-active-bg-color: #{$blueGrey300-13};
+
+    --editor-extension-jira-key-color: #{$blueGrey800};
+
+    --editor-extension-jira-suggestion-text-color: #{$blueGrey950};
+    --editor-extension-jira-suggestion-text-color__active: #{$blueGrey950};
+    --editor-extension-jira-suggestion-bg-color__active: #{rgba(var(--accent-color-triplet), 0.2)};
+    --editor-extension-jira-suggestion-icon-color: #{$blueGrey400};
+    --editor-extension-jira-suggestion-title-text-color: #{$blueGrey950};
+
+    --extension-codeblock-copy-button-bg-color: #{$blueGrey300-13};
+    --extension-codeblock-copy-button-text-color: #{$blueGrey400};
+    --extension-codeblock-copy-button-bg-color__hover: #{$blueGrey300-32};
+    --extension-codeblock-copy-button-text-color__hover: #{$blueGrey800};
+
+    --extension-codeblock-language-selector-bg-color: #{$blueGrey300-13};
+    --extension-codeblock-language-selector-text-color: #{$blueGrey800};
+    --extension-codeblock-language-selector-placeholder-color: #{$blueGrey300};
+    --extension-codeblock-language-selector-item-text-color: #{$blueGrey950};
+    --extension-codeblock-language-selector-item-bg-color__hover: #{rgba(var(--accent-color-triplet), 0.2)};
+    --extension-codeblock-language-selector-item-text-color__hover: #{$blueGrey950};
+    --extension-codeblock-line-number-text-color: #{$blueGrey300};
+    --extension-codeblock-line-number-line-color: #{var(--tab-divider-color)};
+
+    --editor-extension-placeholder-color: #{$blueGrey300};
+
+    --editor-extension-document-link-bg-color: #{$blueGrey300-13};
+    --editor-extension-document-link-icon-color: #{$blueGrey300};
+    --editor-extension-document-link-bg-color__hover: #{rgba(var(--accent-color-triplet), 0.2)};
+    --editor-extension-document-link-icon-color__hover: #{$blueGrey800};
+
+    --editor-extension-quickadd-autocomplete-color: #{$blueGrey300};
+    --editor-extension-quickadd-suggestion-bg-color__hover: #{$blueGrey300-13};
+
+    --editor-extension-image-bg-color__active: #{rgba(var(--accent-color-triplet), 1)};
+    --editor-extension-image-bg-color__loading: #{rgba($white, 0.65)};
+    --editor-extension-image-controls-icon-color: #{$blueGrey600};
+    --editor-extension-image-border-color__loading: #{var(--tab-divider-color)};
+
+    --editor-extension-github-link-color: #{$blueGrey700};
+
+    /* ENTITIES */
+    --jira-clip-bg-color: #{$blueGrey300-13};
+    --jira-clip-bg-color__hover: #{$blueGrey300-32};
+    --jira-clip-key-text-color: #{$blueGrey950};
+    --jira-clip-key-text-color__hover: #{$blueGrey950};
+
+    --jira-panel-label-color: #{$blueGrey500};
+    --jira-panel-text-color: #{$blueGrey950};
+    --jira-panel-wrapper-bg__hover: #{$blueGrey200};
+    --jira-panel-wrapper-text-bg-color__hover: #{$blueGrey200};
+    --jira-panel-wrapper-text-bg-color: #{$blueGrey200};
+    --jira-panel-header-bg-color: #{rgba($white, 0.8)};
+    --jira-panel-header-text-color: #{$blueGrey600};
+    --jira-panel-header-icon-color: #{$blueGrey400};
+    --jira-panel-header-icon-color__hover: #{$blueGrey500};
+    --jira-panel-title-color: #{$blueGrey800};
+
+    --jira-title-key-color: #{$blueGrey300};
+    --jira-title-text-color: #{$blueGrey800};
+
+    --page-header-controls: #{$blueGrey400};
+    --page-panel-header-button-color: #{$blueGrey200};
+    --page-panel-header-button-bg-color__hover: #{var(--a-select-button-highlight-bg)};
+    --page-panel-header-button-color__hover: #{var(--a-select-text-highlight-color)};
+    --page-panel-header-button-close-color: #{$blueGrey400};
+
+    --entities-controls-date-picker-bg-color: #{$blueGrey300-13};
+    --entities-controls-backlinks-text-color: #{var(--a-select-text-highlight-color)};
+    --entities-controls-backlinks-bg-color: #{$blueGrey300-13};
+    --entities-controls-backlinks-text-color__hover: #{var(--a-select-text-highlight-color)};
+    --entities-controls-backlinks-bg-color__hover: #{$blueGrey300-32};
+    --entities-controls-backlinks-icon-color: #{var(--a-select-icon-default-color)};
+    --entities-controls-backlinks-icon-color__hover: #{var(--a-select-icon-default-color)};
+
+    --entities-panel-bg-color__detached: #{$white};
+    --entities-panel-box-shadow__detached: 0px 1px 6px rgba(0, 0, 0, 0.36), 0px 4px 17px rgba(0, 0, 0, 0.16);
+
+    /* PANEL */
+    --my-day-panel-entity-background: #{$blueGrey500-16};
+    --my-day-panel-entity-background__hover: #{$blueGrey300-32};
+    --my-day-panel-entity-icon-color: #{$blueGrey800};
+
+    /* HEADER */
+    --header-all-pages-title-bg-color__hover: #{$blueGrey300-13};
+    --header-all-pages-icon-color: #{$blueGrey500};
+    --header-all-pages-empty-icon-color: #{$blueGrey300-32};
+    --header-all-pages-empty-text-color: #{$blueGrey300-32};
+
+    --project-selector-input-text-color: #{$blueGrey800};
+    --project-selector-placeholder-color: #{$blueGrey300};
+    --project-selector-item-text-color: #{$blueGrey800};
+    --project-selector-item-text-color__hover: #{$blueGrey950};
+    --project-selector-item-bg-color__hover: #{$blueGrey300-13};
+    --project-selector-input-bg-color: none;
+
+    /* INTEGRATIONS */
+    --jira-activity-text-color: #{$blueGrey400};
+    --jira-activity-text-color__highlight: #{$blueGrey950};
+    --jira-activity-date-color: #{$blueGrey400};
+
+    --jira-comment-title-color: #{$blueGrey950};
+    --jira-comment-date-color: #{$blueGrey400};
+    --jira-comment-link-color: #{$blueGrey400};
+
+    --jira-activity-button-text-color: #{$blueGrey600};
+    --jira-activity-button-bg-color: #{none};
+    --jira-activity-button-text-color__hover: #{$blueGrey950};
+    --jira-activity-button-bg-color__hover: #{$blueGrey300-13};
+    --jira-activity-divider-color: #{var(--tab-divider-color)};
+
+    --issue-assignee-user-bg__hover: #{$blueGrey300-13};
+
+    --issue-clip-trigger-bg-color: #{$blueGrey300-13};
+    --issue-clip-trigger-bg-color__hover: #{linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 100%), #272d38};
+    --issue-clib-trigger-tasks-color: #{$blueGrey300};
+    --issue-clip-trigger-icon-color: #{$blueGrey600};
+    --issue-clip-trigger-icon-color__hover: #{$white};
+    --issue-clip-trigger-bg-color__highlight: #{$blueGrey800};
+    --issue-clip-trigger-bg-color__highlight__hover: #{$black};
+    --issue-clip-trigger-icon-color__highlight: #{$white};
+    --issue-clip-trigger-bg-color__has-doc: #{$blueGrey300-13};
+
+    --issue-labels-text-color: #{$blueGrey600};
+    --issue-labels-bg-color__hover: #{$blueGrey300-32};
+    --issue-labels-border-color: #{$blueGrey300-32};
+
+    --issue-priority-bg-color__hover: #{$blueGrey300-13};
+    --issue-priority-icon-color: #{$blueGrey300};
+
+    --issue-status-bg-color__hover: #{$blueGrey300-13};
+
+    --jira-issue-text-color: #{$blueGrey950};
+    --jira-issue-key-color: #{$blueGrey400};
+    --jira-issue-bg-color__hover: #{$blueGrey300-13};
+
+    --jira-clip-existing-button-text-color: #{$blueGrey400};
+    --jira-clip-existing-button-text-color__hover: #{$blueGrey500};
+
+    --jira-notification-bg-color: #{$blueGrey300-13};
+    --jira-notification-text-color: #{$blueGrey800};
+    --jira-notification-button-text-color: #{$blueGrey800};
+    --jira-notification-button-bg-color: #{$blueGrey300-13};
+    --jira-notification-button-text-color__hover: #{$blueGrey700};
+    --jira-notification-button-bg-color__hover: #{$blueGrey300-32};
+
+    --jira-page-header-meta-text-color: #{$blueGrey500};
+    --jira-page-header-filter-bg-color: #{$blueGrey300-13};
+    --jira-page-header-filter-button-text-color: #{$blueGrey950};
+    --jira-page-header-filter-button-text-color__hover: #{$blueGrey950};
+    --jira-page-header-filter-selector-bg-color__hover: #{$blueGrey300-32};
+    --jira-page-header-filter-selector-icon-color: #{$blueGrey400};
+    --jira-page-header-filter-selector-loading-color: #{$blueGrey300};
+
+    --jira-reporter-text-color: #{$blueGrey800};
+
+    --jira-search-placeholder: #{$blueGrey300};
+
+    --jira-section-header-collapse-color: #{$blueGrey600};
+    --jira-section-header-text-color__active: #{$blueGrey700};
+    --jira-section-header-border-color: #{$blueGrey500-14};
+    --jira-section-header-name-color: #{$blueGrey600};
+    --jira-section-header-count-bg-color: #{$blueGrey500-14};
+
+    --jira-project-switch-option-text-color: #{$blueGrey950};
+    --jira-project-switch-option-text-color__hover: #{$blueGrey950};
+    --jira-project-switch-option-bg-color__hover: #{$blueGrey300-13};
+    --jira-project-switch-option-text-color__active: #{$blueGrey950};
+    --jira-project-switch-option-loading-color: #{$blueGrey400};
+
+    --jira-disclaimer-text-color: #{$blueGrey600};
+    --jira-disclaimer-text-color__settings: #{$blueGrey600};
+    --jira-disclaimer-bg-color: #{$blueGrey300-13};
+
+    /* NOTIFICATIONS */
+    --notification-header-color: #{$blueGrey800};
+    --notification-description-color: #{$blueGrey800};
+    --notification-button-text-color: #{$blueGrey400};
+    --notification-button-text-color__hover: #{$blueGrey500};
+
+    /* PROJECT */
+    --project-editor-button-icon-color__hover: #{$blueGrey800};
+
+    /* SUGGESTIONS */
+    --document-suggestion-text-color: #{$blueGrey950};
+    --document-suggestion-icon-color: #{$blueGrey300};
+    --document-suggestion-icon-color__active: #{$blueGrey800};
+    --document-suggestion-text-color__active: #{$blueGrey950};
+    --document-suggestion-bg-color__active: #{rgba(var(--accent-color-triplet), 0.2)};
+
+    --event-suggestion-icon-color: #{$blueGrey300};
+    --event-suggestion-bg-color__active: #{rgba(var(--accent-color-triplet), 0.2)};
+    --event-suggestion-time-color: #{$blueGrey300};
+    --event-suggestion-text-color__active: #{$blueGrey950};
+    --event-suggestion-time-color__active: #{$blueGrey300};
+
+    --suggestion-bg-color__active: #{rgba(var(--accent-color-triplet), 0.2)};
+    --suggestion-text-color: #{$blueGrey950};
+    --suggestion-label-color: #{$blueGrey300};
+    --suggestion-extra-color: #{$blueGrey300};
+
+    /* SYSTEM */
+    --a-check-default-bg-color: #{$blueGrey500};
+    --a-check-checked-bg-color: #{$blueGrey900};
+    --a-check-icon-color: #{$white};
+
+    --a-color-picker-clear-text: #{$blueGrey600};
+
+    --a-dropdown-text-default-color: #{$blueGrey600};
+    --a-dropdown-text-highlight-color: #{$blueGrey800};
+    --a-dropdown-button-highlight-bg: #{$blueGrey300-13};
+    --a-dropdown-no-results-text-color: #{$blueGrey300};
+    --a-dropdown-clear-text-color: #{$blueGrey600};
+    --a-dropdown-clear-bg-color: #{$blueGrey300-13};
+    --a-dropdown-clear-text-color__hover: #{$blueGrey800};
+    --a-dropdown-clear-bg-color__hover: #{$blueGrey300-32};
+    --a-dropdown-text-search-text-color: #{$blueGrey800};
+    --a-dropdown-text-search-placeholder-color: #{$blueGrey300};
+
+    --a-select-button-default-bg: #{$blueGrey300-13};
+    --a-select-button-highlight-bg: #{$blueGrey300-32};
+    --a-select-text-default-color: #{$blueGrey400};
+    --a-select-text-highlight-color: #{$blueGrey900};
+    --a-select-icon-default-color: #{$blueGrey500}; // add active color
+
+    --c-button-box-shadow: #{rgba(0, 0, 0, 0)};
+
+    --c-button-primary-text-color: #{$white};
+    --c-button-primary-bg-color: #{$blueGrey900};
+    --c-button-primary-bg-color__hover: #{linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 100%), #272d38};
+
+    --c-button-secondary-text-color: #{$blueGrey950};
+    --c-button-secondary-bg-color: #{$blueGrey300-13};
+    --c-button-secondary-bg-color__hover: #{$blueGrey300-32};
+
+    --c-button-tertiary-text-color: #{$blueGrey800};
+    --c-button-tertiary-bg-color: #{$blueGrey300-32};
+    --c-button-tertiary-bg-color__hover: #{$blueGrey100-05};
+    --c-button-tertiary-text-color__hover: #{$blueGrey950};
+
+    --c-button-text-text-color__hover: #{$blueGrey700};
+    --c-button-text-bg-color__hover: #{$white};
+
+    --c-button-danger-text-color: #{#c0342f};
+    --c-button-danger-bg-color: #{$blueGrey300-13};
+    --c-button-danger-text-color__hover: #{$white};
+    --c-button-danger-bg-color__hover: #{#e85e59};
+
+    --c-dropdown-simple-selected-text-color: #{$blueGrey500};
+    --c-dropdown-simple-selected-text-color__hover: #{$blueGrey950};
+    --c-dropdown-simple-selected-bg-color__hover: #{$blueGrey300-13};
+    --c-dropdown-simple-menu-bg-color__darker: #{$darkBlack};
+
+    --c-icon-switch-bg-color: #{$white};
+    --c-icon-switch-button-text-color: #{$blueGrey600};
+    --c-icon-switch-button-text-color__hover: #{$blueGrey950};
+    --c-icon-switch-button-bg-color: #{$blueGrey300-13}; //please add drop shadow like --dropdown-controls-display-as-switch-box-shadow__hover
+
+    --c-input-text-color: #{$blueGrey950};
+    --c-input-bg-color: #{$blueGrey300-13};
+    --c-input-text-color__hover: #{$blueGrey950};
+    --c-input-bg-color__hover: #{$blueGrey300-32};
+    --c-input-placeholder-color__hover__active: #{$blueGrey300};
+    --c-input-bg-color__hover__active: #{$blueGrey300-32};
+    --c-input-text-color__active: #{$blueGrey950};
+    --c-input-bg-color__active: #{$blueGrey300-32};
+    --c-input-placeholder-color: #{$blueGrey300};
+    --c-input-placeholder-color__lighter: #{$blueGrey300};
+    --c-input-bg-color__invalid: #{#rgba($danger, 0.2)};
+    --c-input-border-color__invalid: #{var(--danger-color)};
+
+    --c-switch-bg-color: #{$blueGrey700};
+    --c-switch-handle-bg-color: #{$white};
+    --c-switch-box-shadow: #{0px 0px 0.5px rgba(0, 0, 0, 0.2), 0px 6px 12px rgba(0, 0, 0, 0.1), 0px 0.5px 4px rgba(0, 0, 0, 0.1)};
+
+    --traffic-lights-bg-color__disabled: #{$blueGrey200};
+
+    /* TASK */
+    --task-bg-color__focused: #{$blueGrey300-13};
+    --task-bg-color_context-menu: #{$blueGrey300-13};
+    --task-bg-color__hover: #{#f7f7f8};
+    --task-box-shadow-color__focused: #{rgba(var(--accent-color-triplet), 0.4)};
+    --task-text-color__completed: #{$blueGrey400};
+    --task-subtask-text-color: #{$blueGrey700};
+    --task-mobile-quick-actions-text-color: #{$white};
+    --task-quick-actions-bg-color: #{#eceef0};
+    --task-quick-actions-bg-color__review: #{#e4e6e9};
+    --task-quick-actions-bg-color__context: #{#eceef0};
+    --task-quick-actions-bg-color__context__review: #{#e4e6e9};
+    --task-quick-actions-gradient: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(236, 238, 240, 1) 100%);
+    --task-quick-actions-gradient__context: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(236, 238, 240, 1) 100%);
+    --task-quick-actions-gradient__review: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(228, 230, 233, 1) 100%);
+    --task-quick-actions-gradient__context__review: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(228, 230, 233, 1) 100%);
+    --task-quick-actions-button-text-color: #{$blueGrey300};
+    --task-quick-actions-button-text-color__hover: #{$blueGrey700};
+    --task-quick-actions-button-bg-color__content: #{$blueGrey300-13};
+    --task-quick-actions-button-bg-color__content__hover: #{$blueGrey300-32};
+    --task-recurrent-icon-color: #{$blueGrey500};
+    --task-recurrent-icon-bg-color__hover: #{$blueGrey700};
+    --task-text-color: #{$blueGrey800};
+    --task-jira-clip-color: #{$blueGrey400};
+    --task-icon-color: #{$blueGrey300};
+    --task-page-color: #{$blueGrey500};
+
+    --task-action-delete-color: #{$blueGrey500-32};
+    --task-action-delete-color__hover: #{$blueGrey500};
+
+    --task-adder-bg-color: #{#f7f7f8};
+    --task-adder-box-shadow: 0px 0.5008620619773865px 1.851124882698059px 0px rgba(0, 0, 0, 0.06), 0px 1.2058829069137573px 4.879526138305664px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.06);
+    --task-adder-box-shadow__hover: 0px 0.5008620619773865px 1.851124882698059px 0px rgba(0, 0, 0, 0.06), 0px 1.2058829069137573px 4.879526138305664px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.06);
+    --task-adder-text-autocomplete-color: #{$blueGrey300};
+    --task-adder-text-color: #{$blueGrey800};
+    --task-adder-placeholder-color: #{$blueGrey300};
+    --task-adder-shadow-blocker-color: #{#f7f7f8};
+    --task-adder-shadow-blocked-box-shadow: 0px 0.5008620619773865px 1.851124882698059px 0px rgba(0, 0, 0, 0.06), 0px 1.2058829069137573px 4.879526138305664px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.06);
+    --task-adder-suggestions-bg-color: #{#f7f7f8};
+    --task-adder-suggestions-box-shadow: 0px 0.5008620619773865px 1.851124882698059px 0px rgba(0, 0, 0, 0.06), 0px 1.2058829069137573px 4.879526138305664px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.06);
+
+    --task-list-adder-input-text-color: #{$blueGrey800};
+    --task-list-adder-wrapper-text-color__hover: #{$blueGrey800};
+    --task-list-adder-wrapper-bg-color: #{$blueGrey600};
+    --task-list-adder-wrapper-bg-color__focused: #{$blueGrey300-13};
+    --task-list-adder-wrapper-color__hover: #{$blueGrey700};
+    --task-list-adder-bg-color: #{$blueGrey300-13};
+    --task-list-adder-autocomplete-color: #{$blueGrey300};
+    --task-list-adder-placeholder-color: #{$blueGrey300};
+    --task-list-adder-suggestion-bg-color: #{#f1f2f4};
+
+    --task-view-all-text-color__empty: #{$blueGrey300-32};
+    --task-view-all-icon-color__empty: #{$blueGrey300-32};
+
+    --task-list-header-color: #{$white};
+    --task-list-button-text-color: #{$blueGrey600};
+    --task-list-button-text-color__hover: #{$blueGrey100};
+    --task-list-redirect-bg-color__hover: #{$blueGrey800};
+    --task-list-redirect-text-color__hover: #{$white};
+    --task-list-add-task-text-color: #{$blueGrey500};
+    --task-list-add-task-text-color__hover: #{$white};
+
+    --task-modal-bg-color__quickadd_active: #{rgba($blueGrey300, 0.13)};
+
+    --task-modal-footer-action-icon-color: #{$blueGrey400};
+    --task-modal-footer-action-icon-color__hover: #{$blueGrey700};
+    --task-modal-footer-action-text-color: #{$blueGrey400};
+    --task-modal-footer-action-text-color__hover: #{$blueGrey700};
+    --task-modal-action-bg-color__hover: #{$blueGrey300-13};
+
+    --task-modal-quickadd-bg-color__active: #{#f7f7f8};
+    --task-modal-quickadd-repeating-icon-color: #{$blueGrey800};
+    --task-modal-quickadd-input-text-color: #{$blueGrey950};
+    --task-modal-quickadd-input-placeholder-color: #{rgba($blueGrey950, 0.2)};
+    --task-modal-quickadd-input-bg-color__active: #{#f7f7f8};
+    --task-modal-quickadd-input-box-shadow__active: none;
+    --task-modal-quickadd-suggestions-bg-color: #{#f7f7f8};
+    --task-modal-quickadd-suggestions-box-shadow: 0px 0.5px 2px 0px rgba(0, 0, 0, 0.06), 0px 1.2px 5px 0px rgba(0, 0, 0, 0.06), 0px 4px 17px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.06);
+
+    --inline-task-drag-handle-color: #{$blueGrey300};
+    --inline-task-suggestion-title-color: #{$blueGrey500};
+    --inline-task-suggestion-icon-color: #{$blueGrey400};
+    --inline-task-suggestion-text-color: #{$blueGrey300};
+
+    /* VAULT */
+    --new-vault-button-text-color: #{$blueGrey700};
+    --new-vault-button-subtext-color: #{$blueGrey500};
+    --new-vault-button-icon-color: #{$blueGrey500};
+    --new-vault-button-bg-color: #{$blueGrey300-13};
+    --new-vault-button-bg-color__hover: #{$blueGrey300-32};
+
+    --vault-settings-image-text-color: #{$white};
+    --vault-settings-input-bg-color: #{$blueGrey300-13};
+    --vault-settings-input-text-color: #{$blueGrey800};
+    --vault-settings-input-placeholder-color: #{$blueGrey300};
+    --vault-settings-button-bg-color: #{$blueGrey300-13};
+    --vault-settings-location-text-color__hover: #{$blueGrey800};
+
+    /* X-RAY */
+    --x-ray-heading-color: #{$blueGrey800};
+    --x-ray-title-color: #{$blueGrey400};
+    --x-ray-subtitle-color: #{$blueGrey500};
+
+    --x-ray-location-button-bg-color__hover: #{$blueGrey300-13};
+    --x-ray-location-button-text-color: #{$blueGrey600};
+    --x-ray-location-button-text-color__hover: #{$blueGrey800};
+    --x-ray-structure-text-color: #{$blueGrey600};
+    --x-ray-structure-text-color__hover: #{$blueGrey800};
+    --x-ray-structure-heading-color: #{$blueGrey300-13};
+
+    /* AUTH */
+    --auth-heading-color: #{$blueGrey950};
+    --auth-label-color: #{$blueGrey500};
+    --auth-input-text-color: #{#272d38};
+    --auth-input-placeholder-color: #{$blueGrey500};
+    --auth-button-text-color: #{var(--c-button-primary-text-color)};
+    --auth-button-bg-color: #{var(--c-button-primary-bg-color)};
+    --auth-button-bg-color__hover: #{var(--c-button-primary-bg-color__hover)};
+    --auth-button-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0);
+    --auth-wrapper-bg-color: #{$blueGrey300-13};
+
+    --auth-action-button-bg-color: #{var(--calendar-picker-bg-color)};
+    --auth-action-button-icon-color: #{var(--calendar-picker-icon-color)};
+    --auth-action-button-text-color: #{var(--calendar-picker-text-color)};
+    --auth-action-button-text-title-color: #{var(--calendar-picker-sub-text-color)};
+    --auth-action-button-bg-color__hover: #{var(--calendar-picker-bg-color__hover)};
+
+    --auth-login-button-text-color: #{$blueGrey400};
+    --auth-login-button-text-color__hover: #{$blueGrey400};
+
+    --auth-mobile-bg-color: #{$black};
+    --auth-mobile-icon-color: #{$blueGrey700};
+
+    --onboarding-description-text-color: #{$blueGrey500};
+    --onboarding-skip-button-text-color: #{$blueGrey400};
+    --onboarding-skip-button-text-color__hover: #{$blueGrey950};
+
+    --vault-wrapper-bg-color: #{$blueGrey300-13};
+
+    --reset-password-heading1-color: #{$white};
+    --reset-password-heading2-color: #{$blueGrey300};
+    --reset-password-text-color: #{$blueGrey300};
+    --reset-password-text-span-color: #{$white};
+    --reset-password-label-color: #{$blueGrey500};
+    --reset-password-input-text-color: #{#272d38};
+    --reset-password-input-placeholder-color: #{$blueGrey500};
+    --reset-password-message-text-color: #{$white};
+
+    --success-back-button-text-color: #{$blueGrey700};
+    --success-back-button-bg-color: #{$white};
+    --success-subheading-text-color: #{$blueGrey400};
+    --success-subheading-link-color: #{$blueGrey100};
+    --success-download-text-color: #{$white};
+
+    --integration-heading-text-color: #{$white};
+
+    --error-heading-text-color: #{$blueGrey950};
+
+    --validate-heading-text-color: #{$blueGrey950};
+
+    /* MOBILE */
+    --mobile-empty-color: #{$blueGrey600};
+    --mobile-app-bg-color: #{$blueGrey950};
+    --mobile-app-back-color: #{$blueGrey300};
+    --mobile-app-back-color__active: #{$white};
+    --mobile-app-title-color: #{$white};
+
+    --mobile-pane-title-color: #{$white};
+    --mobile-pane-icon-color: #{$blueGrey500};
+    --mobile-pane-option-bg-color: #{$blueGrey900};
+    --mobile-pane-option-bg-color__active: #{$blueGrey800};
+    --mobile-pane-option-text-color: #{$white};
+    --mobile-pane-option-icon-color: #{$blueGrey300};
+
+    --mobile-pane-search-input-text-color: #{$white};
+    --mobile-pane-search-input-placeholder-color: #{$blueGrey300};
+    --mobile-pane-search-result-text-color: #{$blueGrey400};
+
+    --mobile-bubble-menu-button-text-color: #{$blueGrey200};
+    --mobile-bubble-menu-button-text-color__active: #{$white};
+    --mobile-bubble-menu-button-text-color__disabled: #{rgba($blueGrey400, 0.5)};
+
+    --mobile-pane-calendar-integration-title-color: #{$blueGrey400};
+
+    --mobile-app-keyborad-button-bg-color: #{$white};
+    --mobile-app-keyborad-button-text-color: #{$blueGrey950};
+
+    --mobile-sync-status-text-color: #{$black};
+    --mobile-sync-status-icon-color: #{#616161};
+    --mobile-sync-status-bg-color: #{$blueGrey100};
+    --mobile-sync-status-box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.14), 0px 5.84887px 9.38936px rgba(0, 0, 0, 0.103558), 0px 3.12708px 3.21952px rgba(0, 0, 0, 0.0899823), 0px 1.75302px 0.536429px rgba(0, 0, 0, 0.0793466), 0px 0.931014px 0px rgba(0, 0, 0, 0.0671629), 0px 0.387416px 0px rgba(0, 0, 0, 0.0482995);
+
+    --mobile-add-menu-button-bg-color: #{$blueGrey100};
+    --mobile-add-menu-button-bg-color__active: #{$white};
+    --mobile-add-menu-button-icon-color: #{$black};
+    --mobile-add-menu-option-text-color: #{$white};
+    --mobile-add-menu-option-icon-color: #{$blueGrey300};
+    --mobile-add-menu-option-bg-color__active: #{$blueGrey800};
+
+    --mobile-documents-meta-text-color: #{$blueGrey500};
+    --mobile-pages-header-color: #{$white};
+
+    --mobile-overview-is-past-text-color: #{$blueGrey300};
+    --mobile-overview-tasks-color: #{#ffd698};
+    --mobile-overview-calendar-color: #{#f5baff};
+    --mobile-overview-meta-icon-color: #{$blueGrey950};
+    --mobile-overview-bg-color: #{rgba($blueGrey800, 0.6)};
+
+    --mobile-auth-heading-color: #{$white};
+    --mobile-auth-label-color: #{$blueGrey500};
+    --mobile-auth-subheading-color: #{$blueGrey300};
+    --mobile-auth-action-text-color: #{$blueGrey500};
+
+    --mobile-apps-switch-color: #{$white};
+    --mobile-apps-options-button-text-color: #{$blueGrey400};
+    --mobile-apps-options-button-text-color__active: #{$white};
+
+    --mobile-header-button-text-color: #{$blueGrey400};
+    --mobile-header-button-icon-color: #{$blueGrey500};
+
+    --recurring-dropdown-text-color: #{$blueGrey400};
+    --recurring-dropdown-icon-color: #{$white};
+    --recurring-dropdown-button-icon-color: #{$blueGrey300};
+    --recurring-dropdown-box-shadow: 0 13.7866px 59.2525px rgb(0 0 0 / 19%), 0 7.37098px 24.7222px rgb(0 0 0 / 16%), 0 4.13211px 9.14071px rgb(0 0 0 / 14%), 0 2.19453px 1.98556px rgb(0 0 0 / 11%);
+
+    --mobile-pane-bg-color: #{rgba($blueGrey800, 0.83)};
+    --mobile-pane-button-bg-color: #{rgba(103, 116, 137, 0.07)};
+    --mobile-pane-button-text-color: #{$white};
+    --mobile-pane-border-color: #{rgba($blueGrey200, 0.07)};
+    --mobile-pane-button-bg-color__active: #{rgba(103, 116, 137, 0.17)};
+    --mobile-pane-button-danger-icon-color__hover: #{$white};
+    --mobile-pane-button-danger-text-color__hover: #{$white};
+    --mobile-pane-button-danger-bg-color__hover: #{rgba($danger, 0.63)};
+
+    --mobile-bubble-menu-box-shadow: 0 13.7866px 59.2525px rgb(0 0 0 / 19%), 0 7.37098px 24.7222px rgb(0 0 0 / 16%), 0 4.13211px 9.14071px rgb(0 0 0 / 14%), 0 2.19453px 1.98556px rgb(0 0 0 / 11%);
+    --mobile-bubble-menu-icon-color: #{$blueGrey300};
+
+    --settings-modal-appearance-option-text-color: #{$blueGrey500};
+    --settings-modal-appearance-option-text-color__active: #{$blueGrey950};
+    --settings-modal-appearance-content-width-bg-color: #{rgba(236, 238, 240, 0.55)};
+    --settings-modal-appearance-content-width-bg-color__active: #{rgba(236, 238, 240, 0.55)};
+
+    --code-highlight-comment-color: #{$blueGrey300};
+    --code-highlight-variable-color: #{#871094};
+    --code-highlight-type-color: #{#ef6c00};
+    --code-highlight-string-color: #{#0d811e};
+    --code-highlight-title-color: #{#80804c};
+    --code-highlight-keyword-color: #{#0033b3};
+
+    --loading-icon-color: #{$blueGrey950};
+
+    --cupertino-pane-background: #2e3643d4;
+    --cupertino-pane-destroy-button-background: #303948;
+    --cupertino-pane-icon-close-color: #949dad;
+
+    --cloud-features-text-color: #{$blueGrey700};
+    --cloud-features-bg-color: #{$blueGrey300-13};
+
+    --github-issue-open-color: #{#3fb950};
+    --github-issue-accepted-color: #{#a371f7};
+    --github-issue-rejected-color: #{#7d8590};
+
+    --github-pr-open-color: #{#3fb950};
+    --github-pr-merged-color: #{#a371f7};
+    --github-pr-draft-color: #{#7d8590};
+    --github-pr-rejected-color: #{#f85149};
+
+    --github-view-row-title-color: #{$blueGrey700};
+    --github-view-header-number-color: #{$blueGrey500};
+    --github-view-title-color: #{$blueGrey800};
+    --github-property-text-color: #{$blueGrey950};
+    --github-comment-border-color: #{$blueGrey300-32};
+    --github-comment-backround-color: #{$white};
+    --github-comment-author-color: #{$blueGrey600};
+    --github-comment-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px 1px rgba(241, 241, 241, 0.02) inset;
+
+    --github-status-pending-color: #{#dbab0a};
+    --github-activity-border-color: #{$blueGrey500};
+    --github-new-activity-background: #{$blueGrey50};
+    --github-new-activity-color: #{$blueGrey500};
+    --github-activity-empty-color: #{$blueGrey300};
+
+    --github-checks-summary-background: #{rgba(46, 54, 67, 0.07)};
+    --github-checks-summary-background__hover: #{rgba(46, 54, 67, 0.11)};
+    --github-checks-summary-border-color: #{$blueGrey300-32};
+    --github-checks-summary-title-color: #{$blueGrey950};
+    --github-checks-summary-subtitle-color: #{$blueGrey400};
+    --github-checks-summary-body-item-color: #{$black};
+    --github-checks-summary-body-item-span-color: #{$blueGrey500};
+
+    --github-timeline-author-color: #{$blueGrey950};
+    --github-timeline-text-color: #{$blueGrey950};
+    --github-timeline-text-color__hover: #{$blueGrey700};
+    --github-timeline-date-color: #{$blueGrey400};
+
+    --github-timeline-label-background: #{$blueGrey500-14};
+    --github-timeline-label-border-color: #{$blueGrey500-16};
+
+    --github-repository-owner-bg-color__hover: #{$blueGrey500-14};
+
+    --panel-background: #{#f7f7f8};
+    --panel-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px 1px rgba(241, 241, 241, 0.02);
+    --panel-header-background: #{rgba(#f7f7f8, 0.8)};
+
+    --github-property-external-redirect-background__hover: #{$blueGrey300-13};
+    --github-property-branch-icon-color: #{$blueGrey500};
+
+    --github-properties-icon-color: #{$blueGrey500};
+    --github-properties-icon-color__hover: #{$blueGrey700};
+
+    --sekeleton-color: rgba(148, 157, 173, 0.16); /* LISTS */
+    --page-status-header-color: #{$blueGrey950};
+    --page-status-header-background__hover: #{$blueGrey500-16};
+    --page-status-header-border-color: #{$blueGrey100};
+    --page-status-header-icon-color: #{$blueGrey700};
+    --page-status-header-page-counter-background: #{#e3e8ef};
+    --page-status-header-page-counter-text-color: #{$blueGrey600};
+
+    --page-list-adder-color: #{$blueGrey600};
+    --page-list-adder-icon-color: #{$blueGrey700};
+    --page-list-adder-color__hover: #{$blueGrey900};
+    --page-list-adder-icon-color__hover: #{$blueGrey800};
+    --page-list-adder-background__hover: #{$blueGrey500-16};
+
+    --page-list-empty-color: #{$blueGrey500};
+    --page-list-empty-add-color: #{$blueGrey700};
+    --page-list-empty-add-color__hover: #{$blueGrey950};
+
+    --page-list-edit-header-box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.16), 0px 1px 6px 0px rgba(0, 0, 0, 0.36);
+
+    --youtube-extension-background: #{$blueGrey50};
+    --youtube-extension-background__hover: #{$blueGrey100};
+    --youtube-extension-title-text-color: #{$blueGrey700};
+    --youtube-extension-title-text-color__hover: #{$blueGrey950};
+    --youtube-extension-title-icon-color: #{$blueGrey600};
+    --youtube-extension-box-shadow: inset 0px 0px 0px 2px rgba(var(--accent-color-triplet), 0.4);
+
+    --integration-header-text-color: var(--tab-title-text-color);
+    --integration-view-menu-text-color: #{$blueGrey500};
+    --integration-view-menu-text-color__hover: var(--tab-title-text-color);
+    --integration-view-menu-bg-color__hover: var(--tab-controls-bg-color__hover);
+}

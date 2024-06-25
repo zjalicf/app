@@ -1,0 +1,391 @@
+name: Production Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-quick-capture:
+    name: Build Quick Capture
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - uses: actions/cache@v4
+        with:
+          path: './quick-capture/node_modules'
+          key: qc-node-modules-${{ hashFiles('./quick-capture/yarn.lock') }}
+
+      - name: Install Dependencies
+        if: steps.cache-dist.outputs.cache-hit != 'true'
+        run: yarn install
+        working-directory: quick-capture
+
+      - name: Generate Quick Capture
+        run: yarn build
+        working-directory: quick-capture
+
+      - name: Save Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: qc-${{ github.sha }}
+          path: quick-capture/dist
+
+  build-frontend-windows:
+    name: Build Frontend Windows
+    runs-on: ubicloud-standard-8
+    env:
+      MONTHLY_BILLING_URL: 'https://buy.stripe.com/dR65km21hekVf7ibIN'
+      YEARLY_BILLING_URL: 'https://buy.stripe.com/fZebIK6hxb8JbV6007'
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+      SENTRY_DSN_URL: 'https://2ce2e478274846a0af4c3bee391c502b@o1191562.ingest.sentry.io/6313004'
+      TRACKING_URL_V2: 'https://europe-west1-dev-acreom.cloudfunctions.net/t2'
+      ACR_OS: windows
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - uses: actions/cache@v4
+        with:
+          path: './frontend/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('./frontend/yarn.lock') }}
+
+      - name: Install Dependencies
+        run: yarn install
+        working-directory: frontend
+
+      - name: Upgrade virtual scroll
+        run: yarn upgrade vue-virtual-collection
+        working-directory: frontend
+
+      - name: Generate Frontend
+        run: yarn build
+        working-directory: frontend
+
+      - name: Save Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: windows-latest-${{ github.sha }}
+          path: frontend/dist
+
+  build-frontend-linux:
+    name: Build Frontend Linux
+    runs-on: ubicloud-standard-8
+    env:
+      MONTHLY_BILLING_URL: 'https://buy.stripe.com/dR65km21hekVf7ibIN'
+      YEARLY_BILLING_URL: 'https://buy.stripe.com/fZebIK6hxb8JbV6007'
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+      SENTRY_DSN_URL: 'https://2ce2e478274846a0af4c3bee391c502b@o1191562.ingest.sentry.io/6313004'
+      TRACKING_URL_V2: 'https://europe-west1-dev-acreom.cloudfunctions.net/t2'
+      ACR_OS: linux
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - uses: actions/cache@v4
+        with:
+          path: './frontend/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('./frontend/yarn.lock') }}
+
+      - name: Install Dependencies
+        run: yarn install
+        working-directory: frontend
+
+      - name: Upgrade virtual scroll
+        run: yarn upgrade vue-virtual-collection
+        working-directory: frontend
+
+      - name: Generate Frontend
+        run: yarn build
+        working-directory: frontend
+
+      - name: Save Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: linux-latest-${{ github.sha }}
+          path: frontend/dist
+
+  build-frontend-mac:
+    name: Build Frontend MacOS
+    runs-on: ubicloud-standard-8
+    env:
+      MONTHLY_BILLING_URL: 'https://buy.stripe.com/dR65km21hekVf7ibIN'
+      YEARLY_BILLING_URL: 'https://buy.stripe.com/fZebIK6hxb8JbV6007'
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+      SENTRY_DSN_URL: 'https://2ce2e478274846a0af4c3bee391c502b@o1191562.ingest.sentry.io/6313004'
+      TRACKING_URL_V2: 'https://europe-west1-dev-acreom.cloudfunctions.net/t2'
+      ACR_OS: mac
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - uses: actions/cache@v4
+        with:
+          path: './frontend/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('./frontend/yarn.lock') }}
+
+      - name: Install Dependencies
+        run: yarn install
+        working-directory: frontend
+
+      - name: Upgrade virtual scroll
+        run: yarn upgrade vue-virtual-collection
+        working-directory: frontend
+
+      - name: Generate Frontend
+        run: yarn build
+        working-directory: frontend
+
+      - name: Save Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: mac-latest-${{ github.sha }}
+          path: frontend/dist
+
+  release-macos-m1:
+    name: Release MacOS M1
+    needs:
+      - build-quick-capture
+      - build-frontend-mac
+    runs-on: macos-latest
+    env:
+      GH_TOKEN: ${{ secrets.ACREOM_RELEASE_REPO_TOKEN }}
+      API_KEY_ID: ${{ secrets.NOTARIZATION_API_KEY_ID }}
+      API_KEY_ISSUER_ID: ${{ secrets.NOTARIZATION_API_KEY_ISSUER_ID }}
+
+      APPLE_ID_PASSWORD: ${{ secrets.MAC_APPLE_ID_PASSWORD }}
+      APPLE_ID: ${{ secrets.MAC_APPLE_ID }}
+      TEAM_ID: ${{ secrets.MAC_TEAM_ID }}
+      CSC_LINK: ${{ secrets.MAC_CERTIFICATES }}
+      CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTIFICATES_PASSWORD }}
+      ADBLOCK: true
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Prepare for app notarization (macOS)
+        # Import Apple API key for app notarization on macOS
+        run: |
+          mkdir -p ~/private_keys/
+          echo '${{ secrets.NOTARIZATION_API_KEY }}' > ~/private_keys/AuthKey_${{ secrets.NOTARIZATION_API_KEY_ID }}.p8
+
+      - uses: actions/cache@v4
+        with:
+          path: './electron/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('./electron/yarn.lock') }}
+
+      - name: Download Quick Capture Artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: qc-${{ github.sha }}
+          path: quick-capture/dist
+
+      - name: Download Frontend Artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: mac-latest-${{ github.sha }}
+          path: frontend/dist
+
+      - name: Install Dependencies
+        run: yarn install
+        working-directory: electron
+
+      - name: Release
+        run: yarn release
+        working-directory: electron
+
+      - name: Merge latest-mac.yml
+        run: |
+          cd ./scripts
+          yarn
+          yarn merge
+        env:
+          GH_TOKEN: ${{ secrets.ACREOM_RELEASE_REPO_TOKEN }}
+
+  release-macos-intel:
+    name: Release MacOS Intel
+    needs:
+      - build-quick-capture
+      - build-frontend-mac
+    runs-on: macos-13
+    env:
+      GH_TOKEN: ${{ secrets.ACREOM_RELEASE_REPO_TOKEN }}
+      API_KEY_ID: ${{ secrets.NOTARIZATION_API_KEY_ID }}
+      API_KEY_ISSUER_ID: ${{ secrets.NOTARIZATION_API_KEY_ISSUER_ID }}
+
+      APPLE_ID_PASSWORD: ${{ secrets.MAC_APPLE_ID_PASSWORD }}
+      APPLE_ID: ${{ secrets.MAC_APPLE_ID }}
+      TEAM_ID: ${{ secrets.MAC_TEAM_ID }}
+      CSC_LINK: ${{ secrets.MAC_CERTIFICATES }}
+      CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTIFICATES_PASSWORD }}
+      ADBLOCK: true
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Prepare for app notarization (macOS)
+        # Import Apple API key for app notarization on macOS
+        run: |
+          mkdir -p ~/private_keys/
+          echo '${{ secrets.NOTARIZATION_API_KEY }}' > ~/private_keys/AuthKey_${{ secrets.NOTARIZATION_API_KEY_ID }}.p8
+
+      - uses: actions/cache@v4
+        with:
+          path: './electron/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('./electron/yarn.lock') }}
+
+      - name: Download Quick Capture Artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: qc-${{ github.sha }}
+          path: quick-capture/dist
+
+      - name: Download Frontend Artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: mac-latest-${{ github.sha }}
+          path: frontend/dist
+
+      - name: Install Dependencies
+        run: yarn install
+        working-directory: electron
+
+      - name: Release
+        run: yarn release
+        working-directory: electron
+
+      - name: Merge latest-mac.yml
+        run: |
+          cd ./scripts
+          yarn
+          yarn merge
+        env:
+          GH_TOKEN: ${{ secrets.ACREOM_RELEASE_REPO_TOKEN }}
+
+  release-windows:
+    name: Release Windows
+    needs:
+      - build-quick-capture
+      - build-frontend-windows
+    runs-on: windows-adam
+    env:
+      GH_TOKEN: ${{ secrets.ACREOM_RELEASE_REPO_TOKEN }}
+      ADBLOCK: true
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - uses: actions/cache@v4
+        with:
+          path: './electron/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('./electron/yarn.lock') }}
+
+      - name: Download Quick Capture Artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: qc-${{ github.sha }}
+          path: quick-capture/dist
+
+      - name: Download Frontend Artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: windows-latest-${{ github.sha }}
+          path: frontend/dist
+
+      - name: Install Dependencies
+        run: yarn install
+        working-directory: electron
+
+      - name: Release
+        run: yarn release
+        working-directory: electron
+
+  release-linux:
+    name: Release Linux
+    needs:
+      - build-quick-capture
+      - build-frontend-linux
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.ACREOM_RELEASE_REPO_TOKEN }}
+      ADBLOCK: true
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - uses: actions/cache@v4
+        with:
+          path: './electron/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('./electron/yarn.lock') }}
+
+      - name: Download Quick Capture Artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: qc-${{ github.sha }}
+          path: quick-capture/dist
+
+      - name: Download Frontend Artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: linux-latest-${{ github.sha }}
+          path: frontend/dist
+
+      - name: Install Dependencies
+        run: yarn install
+        working-directory: electron
+
+      - name: Release
+        run: yarn release
+        working-directory: electron

@@ -1,0 +1,58 @@
+import { v4 } from 'uuid';
+import { IEvent } from '~/@types';
+
+export const createNewEventObject = (
+    vaultId: string,
+    calendarId: string,
+    sendUpdates?: boolean,
+): IEvent => {
+    const id = v4();
+
+    return {
+        id,
+        vaultId,
+        remoteId: null,
+        status: 'confirmed',
+        summary: '',
+        description: '',
+        location: '',
+        creator: { self: true },
+        organizer: { self: true },
+        start: null,
+        end: null,
+        endTimeUnspecified: false,
+        recurrence: null,
+        acreomRecurringId: null,
+        recurringEventId: null,
+        originalStartTime: null,
+        transparency: 'opaque',
+        visibility: 'default',
+        iCalUID: null,
+        sequence: 0,
+        attendees: [],
+        attendeesOmitted: false,
+        extendedProperties: {},
+        hangoutLink: null,
+        conferenceData: {},
+        gadget: null,
+        anyoneCanAddSelf: false,
+        guestsCanInviteOthers: true,
+        guestsCanModify: false,
+        guestsCanSeeOtherGuests: true,
+        privateCopy: false,
+        locked: false,
+        reminders: { useDefault: true },
+        integrationId: null,
+        integrationType: null,
+        source: {},
+        attachments: [],
+        eventType: 'default',
+        linkedDocumentId: null,
+        calendarId,
+        sendUpdates,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        colorId: null,
+        htmlLink: null,
+    };
+};

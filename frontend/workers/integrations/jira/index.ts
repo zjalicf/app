@@ -1,0 +1,1 @@
+export { JiraIntegrationProcessor } from './processor';

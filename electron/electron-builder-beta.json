@@ -1,0 +1,113 @@
+{
+  "productName": "acreom-beta",
+  "extraMetadata": {
+    "name": "acreom-beta"
+  },
+  "copyright": "Copyright © 2024 acreom",
+  "appId": "com.acreom.acreom-desktop-beta",
+  "publish": [
+    {
+      "provider": "github",
+      "owner": "acreom",
+      "repo": "releases-test",
+      "releaseType": "draft"
+    }
+  ],
+  "win": {
+    "extraResources": [
+      {
+        "from": "./Assets/windows",
+        "to": "Assets",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "./build-dev",
+        "to": "Assets",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "directories": {
+    "output": "dist-dev",
+    "buildResources": "./build-dev",
+    "app": "."
+  },
+  "mac": {
+    "type": "distribution",
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false,
+    "entitlements": "./notarize/entitlements.mac.plist",
+    "entitlementsInherit": "./notarize/entitlements.mac.plist",
+    "extraResources": [
+      {
+        "from": "./Assets/mac-${arch}",
+        "to": "Assets",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "./build-dev",
+        "to": "Assets",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "linux": {
+    "target": "AppImage",
+    "category": "Office",
+    "icon": "./build-dev/icon.png",
+    "extraResources": [
+      {
+        "from": "./Assets/linux",
+        "to": "Assets",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "./build-dev",
+        "to": "Assets",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "files": [
+    "package.json",
+    {
+      "from": "../frontend/dist",
+      "to": "./out/acreom",
+      "filter": [
+        "**/*"
+      ]
+    },
+    {
+      "from": "../quick-capture/dist",
+      "to": "./out/quick-capture",
+      "filter": [
+        "**/*"
+      ]
+    },
+    "**/*.js",
+    "**/node_modules/**",
+    "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+    "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+    "!**/node_modules/*.d.ts",
+    "!**/node_modules/.bin",
+    "!notarize"
+  ],
+  "protocols": {
+    "name": "acreom",
+    "schemes": [
+      "acreom"
+    ]
+  }
+}

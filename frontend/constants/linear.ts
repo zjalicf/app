@@ -1,0 +1,31 @@
+export enum LinearIntegrationDataType {
+    ISSUE = 'linear_BIssue',
+    USER = 'linear_AUser',
+    STATE = 'linear_AState',
+    PRIORITY = 'linear_APriority',
+    PROJECT = 'linear_AProject',
+    TEAM = 'linear_ATeam',
+    CYCLE = 'linear_ACycle',
+    LABEL = 'linear_ALabel',
+}
+
+export enum LinearIntegrationActions {
+    INITIALIZE_INTEGRATION = 'linear initialize integration',
+    GET_MYSELF = 'linear get myself',
+    GET_ORGANIZATION = 'linear get organization',
+    GET_TEAMS = 'linear get teams',
+    GET_CYCLES = 'linear get cycles',
+    GET_PRIORITIES = 'linear get priorities',
+    GET_PROJECTS = 'linear get projects',
+    GET_STATES = 'linear get states',
+    GET_LABELS = 'linear get labels',
+    GET_USERS = 'linear get users',
+    GET_ISSUE = 'linear get issue',
+    GET_ISSUES = 'linear get issues',
+    GET_VIEW_PREVIEW_ISSUES = 'linear get view preview issues',
+    LOAD_VIEWS_ISSUES = 'linear load views issues',
+    PREPARE_TEAM_DATA = 'linear prepare team data',
+    GET_COMMENTS_AND_HISTORY = 'linear get comments and history',
+    SEARCH_ISSUES = 'linear search issues',
+    UPDATE_ISSUE = 'linear update issue',
+}

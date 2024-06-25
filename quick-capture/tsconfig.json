@@ -1,0 +1,50 @@
+{
+    "compilerOptions": {
+        "target": "ES2018",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "lib": [
+            "ESNext",
+            "ESNext.AsyncIterable",
+            "DOM"
+        ],
+        "esModuleInterop": true,
+        "allowJs": true,
+        "sourceMap": true,
+        "strict": true,
+        "noEmit": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "./*"
+            ],
+            "@/*": [
+                "./*"
+            ]
+        },
+        "typeRoots": [
+            "./types",
+            "./node_modules/@types"
+        ],
+        "types": [
+            "@types/node",
+            "@nuxt/types",
+            "@nuxtjs/axios",
+            "@nuxtjs/sentry",
+            "vue-final-modal",
+            "electron",
+            "@nuxtjs/vuetify",
+            "./@types",
+            "vue-property-decorator"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        ".nuxt",
+        "dist",
+        "android",
+        "capacitor.config.ts"
+    ]
+}

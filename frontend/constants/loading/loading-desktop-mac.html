@@ -1,0 +1,460 @@
+<style>
+    :root.light {
+        --app-bg-color: #EAECEF;
+        --tab-bg-color: #ffffff;
+        --tab-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+        --sekeleton-color: rgba(148, 157, 173, 0.16);
+        --bg-color: #ffffff;
+        --loading-color: #1e232d;
+    }
+
+    :root.dark {
+        --app-bg-color: #27313d;
+        --tab-bg-color: #1e232d;
+        --tab-box-shadow: none;
+        --sekeleton-color: rgba(217, 217, 217, 0.1);
+        --bg-color: #000000;
+        --loading-color: #ffffff;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body,
+    html,
+    #<%= globals.id %> {
+                         margin: 0;
+                         padding: 0;
+                         overflow: hidden;
+                         background: var(--app-bg-color);
+                     }
+    #main-loader {
+        width: 100%;
+        height: 100vh;
+        background: var(--app-bg-color);
+        display: flex;
+    }
+
+
+    .main-loader__wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        padding-right: 8px;
+    }
+
+    #sidebar {
+        margin-top: 43px;
+        width: 250px;
+        height: calc(100vh - 43px);
+    }
+
+    #content {
+        width: 100%;
+        margin-top: 43px;
+        height: calc(100vh - 52px);
+        background: var(--tab-bg-color);
+        box-shadow: var(--tab-box-shadow);
+        border-radius: 12px;
+    }
+
+    #loading-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #loading-icon::after {
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 2px solid currentColor;
+        border-color: var(--loading-color) var(--loading-color) transparent;
+        animation: rotate 1.2s linear infinite;
+        border-radius: 50%;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .traffic-lights {
+        width: 60px;
+        padding: 7px 5px 5px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+
+    .top-bar {
+        -webkit-app-region: drag;
+        position: absolute;
+        height: 43px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 8px 12px 7px 16px;
+    }
+
+    .no-drag {
+        -webkit-app-region: no-drag;
+    }
+
+    .top-bar button {
+        -webkit-app-region: no-drag;
+        border-style: none;
+        outline: none;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .traffic-lights:hover .icon {
+        display: block;
+    }
+
+    @keyframes shine {
+        to {
+            background-position: calc(100% + 510px) 0;
+        }
+    }
+
+    .skeleton-loader:empty {
+        width: 100%;
+        display: block;
+        background: linear-gradient(
+            90deg,
+            rgba(52, 60, 75, 0) 0%,
+            rgba(107, 120, 143, 0.2) 52.08%,
+            rgba(0, 0, 0, 0) 100%
+        ),
+        var(--sekeleton-color);
+        background-repeat: repeat-y;
+        animation: shine 1s infinite;
+    }
+
+    .skeleton-1 {
+        max-width: 72px;
+        background-size: 72px 100%;
+        background-position: calc(-100% - 72px) 0;
+        height: 16px;
+        border-radius: 20px;
+    }
+
+    .skeleton-2 {
+        max-width: 83px;
+        background-size: 83px 100%;
+        background-position: calc(-100% - 83px) 0;
+        animation-delay: 500ms;
+        height: 16px;
+        border-radius: 20px;
+    }
+
+    .skeleton-3 {
+        max-width: 65px;
+        background-size: 65px 100%;
+        background-position: calc(-100% - 65px) 0;
+        animation-delay: 250ms;
+        height: 16px;
+        border-radius: 20px;
+    }
+
+    .skeleton-4 {
+        max-width: 18px;
+        background-size: 18px 100%;
+        background-position: calc(-100% - 18px) 0;
+        animation-delay: 250ms;
+        height: 18px;
+        border-radius: 6px;
+    }
+
+    .skeleton-5 {
+        max-width: 14px;
+        background-size: 14px 100%;
+        background-position: calc(-100% - 14px) 0;
+        height: 14px;
+        border-radius: 6px;
+    }
+
+    .skeleton-6 {
+        background-size: 100% 100%;
+        background-position: calc(-100%) 0;
+        height: 28px;
+        border-radius: 8px;
+    }
+
+    .skeleton-7 {
+        max-width: 20px;
+        background-size: 20px 100%;
+        background-position: calc(-100% - 20px) 0;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    .skeleton-8 {
+        max-width: 79px;
+        background-size: 77px 100%;
+        background-position: calc(-100% - 77px) 0;
+        height: 14px;
+        border-radius: 20px;
+    }
+
+    .workspace-selector {
+        position: absolute;
+        max-width: 100px;
+        height: 43px;
+        width: 100%;
+        left: 70px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        padding-left: 22px;
+        gap: 18px;
+    }
+
+    .search--wrapper {
+        -webkit-app-region: drag;
+        position: absolute;
+        left: 16px;
+        width: calc(100% - 28px);
+        top: 0;
+        height: 43px;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+    }
+
+    .search {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 10px;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .history {
+        width: 60px;
+        padding: 0px 7px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 14px 14px;
+        gap: 18px;
+        justify-content: center;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .new-tab {
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .account {
+        width: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 43px;
+        top: 0;
+        right: 12px;
+    }
+
+    .main-loader__sidebar {
+        padding-top: 6px;
+        padding-left: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .main-loader__sidebar-item {
+        padding: 6px 0;
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    .sidebar-footer {
+        padding-bottom: 18px;
+        margin-left: -7px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 13px;
+    }
+
+    .sidebar-footer-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 48px;
+    }
+
+    .hide {
+        opacity: 0;
+    }
+
+    .show {
+        opacity: 1;
+    }
+
+    #loading-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--bg-color);
+    }
+</style>
+<div id="main-loader" class="hide">
+    <div class="workspace-selector">
+        <div class="skeleton-loader skeleton-4"></div>
+        <div class="skeleton-loader skeleton-5"></div>
+    </div>
+    <div class="top-bar">
+        <div class="traffic-lights no-drag">
+            <button style="background: #fc615d;" tabindex="-1" onclick="window.electron.close()">
+                <svg class="icon" aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
+                    <path stroke="#4c0000" fill="none" d="M8.5,3.5 L6,6 L3.5,3.5 L6,6 L3.5,8.5 L6,6 L8.5,8.5 L6,6 L8.5,3.5 Z"></path>
+                </svg>
+            </button>
+            <button style="background: #fdbc40;" tabindex="-1" onclick="window.electron.minimize()">
+                <svg class="icon" aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
+                    <rect fill="#975500" width="8" height="2" x="2" y="5" fill-rule="evenodd"></rect>
+                </svg>
+            </button>
+            <button style="background: #34c749;" tabindex="-1" onclick="window.electron.maximize()">
+                <svg class="icon" aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
+                    <g fill="#006500" fill-rule="evenodd">
+                        <path d="M5,3 C5,3 5,6.1325704 5,6.48601043 C5,6.83945045 5.18485201,7 5.49021559,7 L9,7 L9,6 L8,6 L8,5 L7,5 L7,4 L6,4 L6,3 L5,3 Z" transform="rotate(180 7 5)"></path>
+                        <path d="M3,5 C3,5 3,8.1325704 3,8.48601043 C3,8.83945045 3.18485201,9 3.49021559,9 L7,9 L7,8 L6,8 L6,7 L5,7 L5,6 L4,6 L4,5 L3,5 Z"></path>
+                    </g>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="search--wrapper">
+        <div></div>
+        <div class="search">
+            <div class="history">
+                <div class="skeleton-loader skeleton-5"></div>
+                <div class="skeleton-loader skeleton-5"></div>
+            </div>
+            <div class="navigation">
+                <div class="skeleton-loader skeleton-6"></div>
+            </div>
+            <div class="new-tab">
+                <div class="skeleton-loader skeleton-5"></div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <div class="account">
+        <div class="skeleton-loader skeleton-7"></div>
+    </div>
+    <div class="main-loader__wrapper">
+        <div id="sidebar" class="main-loader__sidebar">
+            <div class="sidebar-content">
+                <div class="main-loader__sidebar-item">
+                    <div class="skeleton-loader skeleton-1"></div>
+                </div>
+                <div class="main-loader__sidebar-item">
+                    <div class="skeleton-loader skeleton-2"></div>
+                </div>
+                <div class="main-loader__sidebar-item">
+                    <div class="skeleton-loader skeleton-3"></div>
+                </div>
+                <div class="main-loader__sidebar-item">
+                    <div class="skeleton-loader skeleton-2"></div>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="skeleton-loader skeleton-8"></div>
+                <div class="sidebar-footer-actions">
+                    <div class="skeleton-loader skeleton-5"></div>
+                    <div class="skeleton-loader skeleton-5"></div>
+                </div>
+            </div>
+        </div>
+        <div id="content"></div>
+    </div>
+</div>
+<div id="loading-wrapper" class="hide">
+    <div id="loading-icon" style="width: 30px; height: 30px;"></div>
+</div>
+<script>
+    try {
+        let theme = 'DARK';
+        if (window.electron && window.electron.store.get('theme')) {
+          theme = window.electron.store.get('theme');
+        } else if (localStorage.getItem('theme')) {
+          theme = localStorage.getItem('theme');
+        }
+
+        const html = document.documentElement;
+        html.classList.add(theme.toLowerCase())
+    } catch(e) {
+        console.log(e)
+    }
+
+    let width = 250;
+    const sidebar = document.getElementById('sidebar');
+    sidebar.setAttribute('width', `${width}px`);
+    sidebar.setAttribute('style', `width: ${width}px !important`);
+    try {
+        const vuex = JSON.parse(localStorage.getItem('vuex'));
+        if (vuex) {
+            const miscStore = vuex.misc;
+            if (miscStore) {
+                width = miscStore.sidebarWidth;
+            }
+        }
+        sidebar.setAttribute('width', `${width}px`);
+        sidebar.setAttribute('style', `width: ${width}px !important`);
+    } catch(e) {
+        console.log(e);
+    }
+
+    try {
+        const skeletonEnabled = JSON.parse(localStorage.getItem('skeleton-loader'));
+        const main = document.getElementById('main-loader');
+        const loading = document.getElementById('loading-wrapper');
+        if (skeletonEnabled) {
+            main.classList.replace('hide', 'show');
+        } else {
+            loading.classList.replace('hide', 'show');
+        }
+    } catch(e) {
+        console.log(e);
+    }
+</script>

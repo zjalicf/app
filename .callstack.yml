@@ -1,7 +1,7 @@
 pr_review:
   packages:
     frontend:
-      pre_review_command:
+      pre_review_commands:
         - yarn install
   # Default: true
   auto_run: true

@@ -1,5 +1,8 @@
 pr_review:
   packages:
+    electron:
+      pre_review_commands:
+        - yarn install
     frontend:
       pre_review_commands:
         - yarn install

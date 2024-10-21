@@ -5,8 +5,8 @@
 <p align="center">
   <a href="https://acreom.com">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="/assets/acreom-logo-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="/assets/acreom-logo-light.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="/assets/acreom-logo-light.svg">
+      <source media="(prefers-color-scheme: light)" srcset="/assets/acreom-logo-dark.svg">
       <img src="/assets/acreom-logo-dark.svg" width="200" height="100" alt="acreom logo"/>
     </picture>
   </a>

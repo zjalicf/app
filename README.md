@@ -13,21 +13,9 @@
 </p>
 
 <p align="center">
-    <em> acreom is a personal issue tracker with context. Capture notes, link PRs, and track progress in a lightweight interface. </em>
+    <em> acreom is the 2nd brain for software engineers. If you're looking for a well designed local-first open-source markdown knowledge base on steroids, you found it. acreom can be used as your daily notebook for your stand up notes or your daily agenda, personal issue tracker, project organizer or as a knowledge base. It's designed for speed, simplicity and privacy. </em>
 </p>
 
-With features like intelligent code completion, integrations with dev tools and extensibility, IDEs have fundamentally simplified the way we code, while using the knowledge bases and task managers of today often feels like a burden. Something always irks us about the user experience. It turns out, most of the collaborative interfaces have never been designed for developers but for PMs with developers in mind.
-
-Our mission is to build the workflow tool you will love using alongside your code editor.
-
-This is the spec we have in mind today for such a tool:
-
-- A powerful markdown editor at the core with tasks built-in. We believe that every knowledge base should be actionable.
-- Capture-first organise-later interface built for speed.
-- Deeply integrated with other devtools.
-- Optimised for keyboard.
-- Local-first with sync.
-- Open-source and community driven.
 
 ## Features
 

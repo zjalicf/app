@@ -92,7 +92,7 @@ The order in which you run the commands is important. Electron binds to the port
  ```bash
 cd frontend
 yarn dev
- ```
+```
 ```bash
 cd electron
 yarn dev
@@ -100,7 +100,7 @@ yarn dev
 ```bash
 cd quick-capture
 yarn dev
- ```
+```
 
 ## Contributing
 

@@ -12,8 +12,21 @@
   </a>
 </p>
 
+<h4 align="center">
+    2nd brain for software engineers. Fast, simple and private.
+</h4>
+
+<div align="center">
+    <a href="https://acreom.com">Home Page</a> |
+    <a href="https://acreom.com/downloads">Download</a> |
+    <a href="https://acreom.com/docs/get-started">Documentation</a> |
+    <a href="https://discord.gg/RS9ThmHhQp">Discord Community</a>
+</div>
+<br></br>
+
+
 <p align="center">
-    <em> acreom is the 2nd brain for software engineers. If you're looking for a well-designed local-first open-source markdown knowledge base on steroids, you found it. acreom can be used as your daily notebook for your stand-up notes or your daily agenda, personal issue tracker, project organizer or as a knowledge base. It's designed for speed, simplicity and privacy. </em>
+    <em> If you're looking for a well-designed local-first open-source markdown knowledge base on steroids, you found it. acreom can be used as your daily notebook for your stand-up notes or your daily agenda, personal issue tracker, project organizer or as a knowledge base. It's designed for speed, simplicity and privacy. </em>
 </p>
 
 
@@ -32,10 +45,6 @@
 - Google Calendar Sync (PRO)
 - .ics Calendar Sync
 - acreom Assistant (with ChatGPT Custom Token)
-
-## Learn More 
-1. [Documentation](https://acreom.com/docs/get-started)
-2. [Discord Community](https://discord.gg/RS9ThmHhQp)
 
 
 ## Support 

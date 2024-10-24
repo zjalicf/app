@@ -12,8 +12,21 @@
   </a>
 </p>
 
+<h4 align="center">
+    2nd brain for software engineers. Fast, simple and private.
+</h4>
+
+<div align="center">
+    <a href="https://acreom.com">Home Page</a> |
+    <a href="https://acreom.com/downloads">Download</a> |
+    <a href="https://acreom.com/docs/get-started">Documentation</a> |
+    <a href="https://discord.gg/RS9ThmHhQp">Discord Community</a>
+</div>
+<br></br>
+
+
 <p align="center">
-    <em> acreom is the 2nd brain for software engineers. If you're looking for a well designed local-first open-source markdown knowledge base on steroids, you found it. acreom can be used as your daily notebook for your stand up notes or your daily agenda, personal issue tracker, project organizer or as a knowledge base. It's designed for speed, simplicity and privacy. </em>
+    <em> If you're looking for a well-designed local-first open-source markdown knowledge base on steroids, you found it. acreom can be used as your daily notebook for your stand-up notes or your daily agenda, personal issue tracker, project organizer or as a knowledge base. It's designed for speed, simplicity and privacy. </em>
 </p>
 
 
@@ -33,15 +46,16 @@
 - .ics Calendar Sync
 - acreom Assistant (with ChatGPT Custom Token)
 
+
+## Support 
+acreom's server costs are funded by our awesome community of PRO supporters 💙 If you'd like to support acreom please consider subscribing: https://acreom.com/pricing
+
 ## Development Quick Start
 
 ### Prerequisites
-
-List any prerequisites for your project, such as:
 - Node.js version >=18.16
-- yarn
-- git
-- cross-env (installed globally)
+- yarn version >=1.22
+
 
 ## Installation
 
@@ -76,17 +90,17 @@ Start Quick Capture, frontend, then run electron
 The order in which you run the commands is important. Electron binds to the port that is used by the frontend, so you need to start the frontend first. Quick Capture doesn't need to be started at all, you can skip the step entirely.
 
  ```bash
- cd frontend
- cross-env ARC_OS=[mac|windows|linux] ACR_PLATFORM=[mobile|desktop|web] BASE_URL=https://api.acreom.com FE_BASE_URL=https://app.acreom.com yarn dev
- ```
+cd frontend
+yarn dev
+```
 ```bash
 cd electron
 yarn dev
 ```
 ```bash
- cd quick-capture
- cross-env ARC_OS=[mac|windows|linux] ACR_PLATFORM=[mobile|desktop|web] BASE_URL=https://api.acreom.com FE_BASE_URL=https://app.acreom.com yarn dev
- ```
+cd quick-capture
+yarn dev
+```
 
 ## Contributing
 

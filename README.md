@@ -33,6 +33,14 @@
 - .ics Calendar Sync
 - acreom Assistant (with ChatGPT Custom Token)
 
+## Learn More 
+1. [Documentation](https://acreom.com/docs/get-started)
+2. [Discord Community](https://discord.gg/RS9ThmHhQp)
+
+
+## Support 
+acreom's server costs are funded by our awesome community of PRO supporters 💙 If you'd like to support acreom please consider subscribing: https://acreom.com/pricing
+
 ## Development Quick Start
 
 ### Prerequisites

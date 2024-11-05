@@ -293,7 +293,13 @@ export const createSubWindows = (FRONTEND_PATH: string, ARGS: any) => {
 };
 
 const createQuickNoteWindow = (FRONTEND_PATH: string, ARGS: any) => {
+    const isFullScreen = appWindows.main?.isFullScreen();
     if (process.platform === 'darwin') {
+        if (isFullScreen) {
+            // Since macOS Sequoia, if you hide a fullscreen window, it will not show again
+            // This is a workaround to prevent that
+            appWindows.main.setFullScreen(false);
+        }
         app.dock.hide();
     }
 
@@ -345,6 +351,10 @@ const createQuickNoteWindow = (FRONTEND_PATH: string, ARGS: any) => {
     initializeSpellcheckDictionary(appWindows.quickNote);
     if (process.platform === 'darwin') {
         setTimeout(() => {
+            if (isFullScreen) {
+                // Restore the fullscreen state - macOS Sequoia workaround
+                appWindows.main.setFullScreen(true);
+            }
             app.dock.show();
         }, 500);
     }

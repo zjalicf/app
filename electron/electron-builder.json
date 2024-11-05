@@ -12,8 +12,7 @@
       "private": true,
       "owner": "acreom",
       "repo": "app",
-      "releaseType": "draft",
-      "token": "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"
+      "releaseType": "draft"
     }
   ],
   "win": {

@@ -32,7 +32,7 @@ interface AppState {
 }
 
 export const state = (): AppState => ({
-    latestVersion: '1.20.3',
+    latestVersion: '1.20.4',
     cheatsheetOpen: false,
     editorFocused: false,
     userForcedBlur: false,
